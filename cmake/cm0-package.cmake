@@ -7,7 +7,7 @@
 include(GNUInstallDirs)
 
 set(APP_DISPLAY_NAME "Pocket Notes" CACHE STRING "Human-readable application name used by launchers and package filename")
-set(APP_DEBIAN_REVISION "rev1" CACHE STRING "Debian package revision/vendor suffix")
+set(APP_DEBIAN_REVISION "rev2" CACHE STRING "Debian package revision/vendor suffix")
 set(APP_DEBIAN_ARCHITECTURE "arm64" CACHE STRING "Debian package architecture")
 set(APP_MAINTAINER "xnppnx <xnppnx@126.com>" CACHE STRING "Debian package maintainer")
 set(APP_PACKAGE_DESCRIPTION "A simple notes app for CardputerZero" CACHE STRING "Debian package summary")
