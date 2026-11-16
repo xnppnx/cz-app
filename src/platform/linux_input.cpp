@@ -184,31 +184,32 @@ void key_event_cb(lv_event_t* event) {
 
 #if !USE_DESKTOP
 uint32_t map_evdev_key(uint16_t code) {
+    if (code >= KEY_A && code <= KEY_Z) {
+        return static_cast<uint32_t>('a' + (code - KEY_A));
+    }
+    if (code >= KEY_1 && code <= KEY_9) {
+        return static_cast<uint32_t>('1' + (code - KEY_1));
+    }
     switch (code) {
-        case KEY_ESC:
-            return LV_KEY_ESC;
-        case KEY_LEFT:
-            return LV_KEY_LEFT;
-        case KEY_RIGHT:
-            return LV_KEY_RIGHT;
-        case KEY_Z:
-            return 'z';
-        case KEY_C:
-            return 'c';
-        case KEY_4:
-            return '4';
-        case KEY_5:
-            return '5';
-        case KEY_6:
-            return '6';
-        case KEY_7:
-            return '7';
-        case KEY_8:
-            return '8';
-        case KEY_SYSRQ:
-            return kKeyPrintScreen;
-        case KEY_HELP:
-            return kKeyHelp;
+        case KEY_0:         return '0';
+        case KEY_SPACE:     return ' ';
+        case KEY_ENTER:     return LV_KEY_ENTER;
+        case KEY_KPENTER:   return LV_KEY_ENTER;
+        case KEY_BACKSPACE: return LV_KEY_BACKSPACE;
+        case KEY_ESC:       return LV_KEY_ESC;
+        case KEY_UP:        return LV_KEY_UP;
+        case KEY_DOWN:      return LV_KEY_DOWN;
+        case KEY_LEFT:      return LV_KEY_LEFT;
+        case KEY_RIGHT:     return LV_KEY_RIGHT;
+        case KEY_TAB:       return LV_KEY_NEXT;
+        case KEY_DOT:       return '.';
+        case KEY_COMMA:     return ',';
+        case KEY_SLASH:     return '/';
+        case KEY_MINUS:     return '-';
+        case KEY_SEMICOLON: return ';';
+        case KEY_APOSTROPHE:return '\'';
+        case KEY_SYSRQ:     return kKeyPrintScreen;
+        case KEY_HELP:      return kKeyHelp;
         default:
             return 0;
     }
@@ -225,9 +226,9 @@ bool has_nav_keys(int fd) {
         return (key_bits[code / bits_per_word] & (1UL << (code % bits_per_word))) != 0;
     };
 
-    return has_key(KEY_ESC) || has_key(KEY_LEFT) || has_key(KEY_RIGHT) || has_key(KEY_Z) ||
-           has_key(KEY_C) || has_key(KEY_4) || has_key(KEY_5) || has_key(KEY_6) ||
-           has_key(KEY_7) || has_key(KEY_8) || has_key(KEY_SYSRQ) || has_key(KEY_HELP);
+    return has_key(KEY_ESC) || has_key(KEY_A) || has_key(KEY_Z) || has_key(KEY_ENTER) ||
+           has_key(KEY_SPACE) || has_key(KEY_LEFT) || has_key(KEY_RIGHT) || has_key(KEY_UP) ||
+           has_key(KEY_DOWN) || has_key(KEY_BACKSPACE) || has_key(KEY_SYSRQ) || has_key(KEY_HELP);
 }
 
 void evdev_read_cb(lv_indev_t* indev, lv_indev_data_t* data) {

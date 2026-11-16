@@ -8,6 +8,7 @@
 
 #include "subjects.h"
 #include "base_model.h"
+#include "notes_model.h"
 
 #include "lvgl.h"
 
@@ -29,6 +30,10 @@ public:
     lv_subject_t* bold_text_subject();
     lv_subject_t* info_visible_subject();
     lv_subject_t* quit_requested_subject();
+    lv_subject_t* draft_subject();
+    lv_subject_t* notes_list_subject();
+    lv_subject_t* selected_index_subject();
+    lv_subject_t* status_subject();
 
     bool is_dark_mode() const;
     void set_dark_mode(bool enabled);
@@ -44,10 +49,29 @@ public:
     void toggle_info();
     void request_quit();
 
+    // Notes actions.
+    void load_notes();
+    void begin_new_note();
+    void open_note(std::size_t index);
+    void append_draft(const char* text);
+    void append_draft_char(char ch);
+    void backspace_draft();
+    void clear_draft();
+    void save_current_note();
+    void delete_selected_note();
+    void move_selection(int delta);
+    void set_status(const char* status);
+
+    const std::string& draft() const;
+    std::size_t selected_index() const;
+    std::size_t notes_count() const;
+
 private:
     void publish_all();
+    void publish_notes();
 
     model::BaseModel model_;
+    model::NotesModel notes_;
     reactive::StringSubject<32> title_subject_;
     reactive::StringSubject<32> greeting_subject_;
     reactive::BoolSubject dark_mode_subject_;
@@ -56,6 +80,11 @@ private:
     reactive::BoolSubject bold_text_subject_;
     reactive::BoolSubject info_visible_subject_;
     reactive::BoolSubject quit_requested_subject_;
+    reactive::StringSubject<512> draft_subject_;
+    reactive::StringSubject<1024> notes_list_subject_;
+    reactive::IntSubject selected_index_subject_;
+    reactive::StringSubject<64> status_subject_;
+    bool editing_existing_{false};
 };
 
 } // namespace viewmodel

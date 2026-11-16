@@ -6,12 +6,18 @@
 
 #include "base_viewmodel.h"
 
+#include <algorithm>
+#include <cstdio>
+
 namespace viewmodel {
 namespace {
 
 int page_to_int(model::AppPage page) {
     return static_cast<int>(page);
 }
+
+constexpr std::size_t kMaxDraftChars = 480;
+constexpr std::size_t kMaxNotesShown = 12;
 
 } // namespace
 
@@ -23,7 +29,11 @@ BaseViewModel::BaseViewModel()
       counter_subject_(0),
       bold_text_subject_(false),
       info_visible_subject_(false),
-      quit_requested_subject_(false) {}
+      quit_requested_subject_(false),
+      draft_subject_(""),
+      notes_list_subject_(""),
+      selected_index_subject_(0),
+      status_subject_("") {}
 
 BaseViewModel::~BaseViewModel() = default;
 
@@ -57,6 +67,22 @@ lv_subject_t* BaseViewModel::info_visible_subject() {
 
 lv_subject_t* BaseViewModel::quit_requested_subject() {
     return quit_requested_subject_.native();
+}
+
+lv_subject_t* BaseViewModel::draft_subject() {
+    return draft_subject_.native();
+}
+
+lv_subject_t* BaseViewModel::notes_list_subject() {
+    return notes_list_subject_.native();
+}
+
+lv_subject_t* BaseViewModel::selected_index_subject() {
+    return selected_index_subject_.native();
+}
+
+lv_subject_t* BaseViewModel::status_subject() {
+    return status_subject_.native();
 }
 
 bool BaseViewModel::is_dark_mode() const {
@@ -118,6 +144,182 @@ void BaseViewModel::publish_all() {
     greeting_subject_.set(model_.greeting());
     dark_mode_subject_.set(model_.dark_mode());
     current_page_subject_.set(page_to_int(model_.current_page()));
+}
+
+void BaseViewModel::publish_notes() {
+    char buffer[1200];
+    buffer[0] = '\0';
+    std::size_t used = 0;
+
+    const std::size_t total = notes_.count();
+    if (total == 0) {
+        std::snprintf(buffer, sizeof(buffer), "No notes yet.  Press N to write one.");
+    } else {
+        const std::size_t start = selected_index_subject_.value() >= 0
+            ? static_cast<std::size_t>(selected_index_subject_.value())
+            : 0;
+        const std::size_t end = std::min(total, start + kMaxNotesShown);
+        for (std::size_t i = start; i < end; ++i) {
+            const char* marker = (i == static_cast<std::size_t>(selected_index_subject_.value())) ? "> " : "  ";
+            const std::string& note = notes_.at(i);
+            std::string flat = note;
+            std::replace(flat.begin(), flat.end(), '\n', ' ');
+            if (flat.size() > 34) {
+                flat = flat.substr(0, 34);
+                flat += "...";
+            }
+            const int written = std::snprintf(buffer + used,
+                                              sizeof(buffer) - used,
+                                              "%s%zu. %s\n",
+                                              marker,
+                                              i + 1,
+                                              flat.c_str());
+            if (written <= 0 || used + static_cast<std::size_t>(written) >= sizeof(buffer)) {
+                break;
+            }
+            used += static_cast<std::size_t>(written);
+        }
+    }
+    notes_list_subject_.set(buffer);
+}
+
+void BaseViewModel::load_notes() {
+    notes_.load();
+    const auto count = static_cast<int>(notes_.count());
+    selected_index_subject_.set(count > 0 ? 0 : 0);
+    publish_notes();
+    set_status("Ready");
+}
+
+void BaseViewModel::begin_new_note() {
+    editing_existing_ = false;
+    clear_draft();
+    set_status("New note");
+    show_butter_page();
+}
+
+void BaseViewModel::open_note(std::size_t index) {
+    if (index >= notes_.count()) {
+        return;
+    }
+    editing_existing_ = true;
+    draft_subject_.set(notes_.at(index).c_str());
+    set_status("Edit note");
+    show_butter_page();
+}
+
+void BaseViewModel::append_draft(const char* text) {
+    if (!text) {
+        return;
+    }
+    std::string next = draft();
+    if (next.size() >= kMaxDraftChars) {
+        set_status("Note is full");
+        return;
+    }
+    next += text;
+    draft_subject_.set(next.c_str());
+}
+
+void BaseViewModel::append_draft_char(char ch) {
+    char text[2] = {ch, '\0'};
+    append_draft(text);
+}
+
+void BaseViewModel::backspace_draft() {
+    std::string next = draft();
+    if (next.empty()) {
+        return;
+    }
+    next.pop_back();
+    draft_subject_.set(next.c_str());
+}
+
+void BaseViewModel::clear_draft() {
+    draft_subject_.set("");
+}
+
+void BaseViewModel::save_current_note() {
+    const std::string text = draft();
+    if (text.empty()) {
+        set_status("Empty note discarded");
+    } else if (editing_existing_) {
+        const auto index = static_cast<std::size_t>(selected_index_subject_.value());
+        if (index < notes_.count()) {
+            notes_.remove(index);
+            notes_.append(text);
+            set_status("Note updated");
+        }
+    } else {
+        notes_.append(text);
+        set_status("Note saved");
+    }
+
+    if (!notes_.save()) {
+        set_status("Save failed!");
+    }
+    editing_existing_ = false;
+    clear_draft();
+    if (notes_.count() > 0 &&
+        static_cast<std::size_t>(selected_index_subject_.value()) >= notes_.count()) {
+        selected_index_subject_.set(static_cast<int>(notes_.count() - 1));
+    }
+    publish_notes();
+    show_apple_page();
+}
+
+void BaseViewModel::delete_selected_note() {
+    const auto index = static_cast<std::size_t>(selected_index_subject_.value());
+    if (index >= notes_.count()) {
+        set_status("Nothing to delete");
+        return;
+    }
+    notes_.remove(index);
+    notes_.save();
+    if (static_cast<std::size_t>(selected_index_subject_.value()) >= notes_.count() && notes_.count() > 0) {
+        selected_index_subject_.set(static_cast<int>(notes_.count() - 1));
+    }
+    publish_notes();
+    set_status("Note deleted");
+}
+
+void BaseViewModel::move_selection(int delta) {
+    const auto count = static_cast<int>(notes_.count());
+    if (count == 0) {
+        return;
+    }
+    int next = selected_index_subject_.value() + delta;
+    if (next < 0) {
+        next = 0;
+    }
+    if (next >= count) {
+        next = count - 1;
+    }
+    selected_index_subject_.set(next);
+    publish_notes();
+}
+
+void BaseViewModel::set_status(const char* status) {
+    status_subject_.set(status ? status : "");
+}
+
+const std::string& BaseViewModel::draft() const {
+    static const std::string empty;
+    const char* value = lv_subject_get_string(const_cast<lv_subject_t*>(draft_subject_.native()));
+    // StringSubject owns its buffer; return a stable reference via a thread-local copy.
+    thread_local std::string cache;
+    cache = value ? value : "";
+    (void)empty;
+    return cache;
+}
+
+std::size_t BaseViewModel::selected_index() const {
+    const int value = selected_index_subject_.value();
+    return value < 0 ? 0 : static_cast<std::size_t>(value);
+}
+
+std::size_t BaseViewModel::notes_count() const {
+    return notes_.count();
 }
 
 } // namespace viewmodel
