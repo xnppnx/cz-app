@@ -6,8 +6,6 @@
 
 #include "ocr_service.h"
 
-#include "logger.h"
-
 #include <chrono>
 #include <cstdio>
 #include <cstdlib>

@@ -413,8 +413,6 @@ target_include_directories(${PROJECT_NAME}_platform
     PUBLIC
         ${LVGL_INCLUDE_DIR}
         "${CMAKE_CURRENT_SOURCE_DIR}/src/platform"
-        "${CMAKE_CURRENT_SOURCE_DIR}/src/logger"
-        ${PLATFORM_INCLUDE_DIR}
 )
 
 target_compile_definitions(${PROJECT_NAME}_platform

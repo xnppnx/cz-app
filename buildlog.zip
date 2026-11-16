@@ -1,0 +1,1194 @@
+﻿2026-11-16T16:26:31.7731877Z Current runner version: '2.338.2'
+2026-11-16T16:26:31.7755815Z ##[group]Runner Image Provisioner
+2026-11-16T16:26:31.7756695Z Hosted Compute Agent
+2026-11-16T16:26:31.7757316Z Version: 20261103.629
+2026-11-16T16:26:31.7758230Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+2026-11-16T16:26:31.7758942Z Build Date: 2026-11-03T17:26:59Z
+2026-11-16T16:26:31.7759745Z Worker ID: {8bbbc997-e180-4fd4-bfe3-68cdaadc4857}
+2026-11-16T16:26:31.7760542Z Region: us-east-1
+2026-11-16T16:26:31.7761134Z Cloud: AWS
+2026-11-16T16:26:31.7761730Z ##[endgroup]
+2026-11-16T16:26:31.7763361Z ##[group]Operating System
+2026-11-16T16:26:31.7764035Z Ubuntu
+2026-11-16T16:26:31.7764511Z 24.04.5
+2026-11-16T16:26:31.7764954Z LTS
+2026-11-16T16:26:31.7765515Z ##[endgroup]
+2026-11-16T16:26:31.7766061Z ##[group]Runner Image
+2026-11-16T16:26:31.7766625Z Image: ubuntu-24.04
+2026-11-16T16:26:31.7767195Z Version: 20261111.127.1
+2026-11-16T16:26:31.7769152Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261111.127/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-16T16:26:31.7770655Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261111.127
+2026-11-16T16:26:31.7771741Z ##[endgroup]
+2026-11-16T16:26:31.7772908Z ##[group]GITHUB_TOKEN Permissions
+2026-11-16T16:26:31.7775479Z Contents: read
+2026-11-16T16:26:31.7776042Z Metadata: read
+2026-11-16T16:26:31.7776610Z Packages: read
+2026-11-16T16:26:31.7777162Z ##[endgroup]
+2026-11-16T16:26:31.7779868Z Secret source: Actions
+2026-11-16T16:26:31.7780845Z Cache mode: write
+2026-11-16T16:26:31.7781666Z Prepare workflow directory
+2026-11-16T16:26:31.8120937Z Prepare all required actions
+2026-11-16T16:26:31.8174884Z Getting action download info
+2026-11-16T16:26:32.0463257Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-16T16:26:33.6622195Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-16T16:26:33.9722430Z Complete job name: build
+2026-11-16T16:26:34.0394822Z ##[group]Run actions/checkout@v4
+2026-11-16T16:26:34.0395540Z with:
+2026-11-16T16:26:34.0396015Z   repository: xnppnx/cz-app
+2026-11-16T16:26:34.0399823Z   token: ***
+2026-11-16T16:26:34.0400298Z   ssh-strict: true
+2026-11-16T16:26:34.0400741Z   ssh-user: git
+2026-11-16T16:26:34.0401188Z   persist-credentials: true
+2026-11-16T16:26:34.0401678Z   clean: true
+2026-11-16T16:26:34.0402137Z   sparse-checkout-cone-mode: true
+2026-11-16T16:26:34.0402665Z   fetch-depth: 1
+2026-11-16T16:26:34.0403165Z   fetch-tags: false
+2026-11-16T16:26:34.0403590Z   show-progress: true
+2026-11-16T16:26:34.0404079Z   lfs: false
+2026-11-16T16:26:34.0404509Z   submodules: false
+2026-11-16T16:26:34.0404933Z   set-safe-directory: true
+2026-11-16T16:26:34.0405444Z   allow-unsafe-pr-checkout: false
+2026-11-16T16:26:34.0406141Z ##[endgroup]
+2026-11-16T16:26:36.1578452Z Syncing repository: xnppnx/cz-app
+2026-11-16T16:26:36.1580096Z ##[group]Getting Git version info
+2026-11-16T16:26:36.1580796Z Working directory is '/home/runner/work/cz-app/cz-app'
+2026-11-16T16:26:36.1581513Z [command]/usr/bin/git version
+2026-11-16T16:26:36.2767221Z git version 2.56.1
+2026-11-16T16:26:36.2780623Z ##[endgroup]
+2026-11-16T16:26:36.2791374Z Temporarily overriding HOME='/home/runner/work/_temp/4886762b-de4a-4d96-9791-c7307d353827' before making global git config changes
+2026-11-16T16:26:36.2792363Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-16T16:26:36.2795148Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cz-app/cz-app
+2026-11-16T16:26:36.3110969Z Deleting the contents of '/home/runner/work/cz-app/cz-app'
+2026-11-16T16:26:36.3113995Z ##[group]Initializing the repository
+2026-11-16T16:26:36.3118364Z [command]/usr/bin/git init /home/runner/work/cz-app/cz-app
+2026-11-16T16:26:36.3663439Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-16T16:26:36.3664887Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-16T16:26:36.3669322Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-16T16:26:36.3670001Z hint: call:
+2026-11-16T16:26:36.3671128Z hint:
+2026-11-16T16:26:36.3671683Z hint: 	git config --global init.defaultBranch <name>
+2026-11-16T16:26:36.3672231Z hint:
+2026-11-16T16:26:36.3672593Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-16T16:26:36.3673136Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-16T16:26:36.3673550Z hint:
+2026-11-16T16:26:36.3673818Z hint: 	git branch -m <name>
+2026-11-16T16:26:36.3674107Z hint:
+2026-11-16T16:26:36.3674525Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-16T16:26:36.3676776Z Initialized empty Git repository in /home/runner/work/cz-app/cz-app/.git/
+2026-11-16T16:26:36.3686341Z [command]/usr/bin/git remote add origin https://github.com/xnppnx/cz-app
+2026-11-16T16:26:36.3743411Z ##[endgroup]
+2026-11-16T16:26:36.3744189Z ##[group]Disabling automatic garbage collection
+2026-11-16T16:26:36.3746216Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-16T16:26:36.3772395Z ##[endgroup]
+2026-11-16T16:26:36.3773034Z ##[group]Setting up auth
+2026-11-16T16:26:36.3778431Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-16T16:26:36.3810689Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-16T16:26:36.6168905Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-16T16:26:36.6197286Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-16T16:26:36.6358954Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-16T16:26:36.6384161Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-16T16:26:36.6539946Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-16T16:26:36.6571369Z ##[endgroup]
+2026-11-16T16:26:36.6572223Z ##[group]Fetching the repository
+2026-11-16T16:26:36.6582879Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ca91ad503482bb572dc8bcda69355924e117cae2:refs/remotes/origin/master
+2026-11-16T16:26:37.2026213Z From https://github.com/xnppnx/cz-app
+2026-11-16T16:26:37.2027134Z  * [new ref]         ca91ad503482bb572dc8bcda69355924e117cae2 -> origin/master
+2026-11-16T16:26:37.2029140Z ##[endgroup]
+2026-11-16T16:26:37.2029681Z ##[group]Determining the checkout info
+2026-11-16T16:26:37.2032735Z ##[endgroup]
+2026-11-16T16:26:37.2036829Z [command]/usr/bin/git sparse-checkout disable
+2026-11-16T16:26:37.2104424Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-16T16:26:37.2128828Z ##[group]Checking out the ref
+2026-11-16T16:26:37.2132971Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-11-16T16:26:37.2327799Z Reset branch 'master'
+2026-11-16T16:26:37.2333816Z branch 'master' set up to track 'origin/master'.
+2026-11-16T16:26:37.2339774Z ##[endgroup]
+2026-11-16T16:26:37.2378298Z [command]/usr/bin/git log -1 --format=%H
+2026-11-16T16:26:37.2399232Z ca91ad503482bb572dc8bcda69355924e117cae2
+2026-11-16T16:26:37.2580827Z ##[group]Run sudo apt-get update
+2026-11-16T16:26:37.2581219Z [36;1msudo apt-get update[0m
+2026-11-16T16:26:37.2581599Z [36;1msudo apt-get install -y crossbuild-essential-arm64 ninja-build[0m
+2026-11-16T16:26:37.2582091Z [36;1mpython3 -m pip install --break-system-packages "cmake>=3.31"[0m
+2026-11-16T16:26:37.3126147Z shell: /usr/bin/bash -e {0}
+2026-11-16T16:26:37.3126532Z ##[endgroup]
+2026-11-16T16:26:37.4224132Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [152 B]
+2026-11-16T16:26:37.4505285Z Get:5 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-11-16T16:26:37.4616495Z Hit:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble InRelease
+2026-11-16T16:26:37.4756467Z Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-11-16T16:26:37.5111224Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [702 kB]
+2026-11-16T16:26:37.5649435Z Get:4 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-11-16T16:26:37.5766614Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [772 kB]
+2026-11-16T16:26:37.5808968Z Get:8 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-11-16T16:26:37.6502169Z Get:9 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1450 kB]
+2026-11-16T16:26:37.7053598Z Get:10 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [315 kB]
+2026-11-16T16:26:37.7231364Z Get:11 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1713 kB]
+2026-11-16T16:26:37.7702750Z Get:12 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [345 kB]
+2026-11-16T16:26:37.7855367Z Get:13 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1883 kB]
+2026-11-16T16:26:37.8296739Z Get:14 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [430 kB]
+2026-11-16T16:26:37.8486408Z Get:15 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [14.6 kB]
+2026-11-16T16:26:37.9768985Z Get:16 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1195 kB]
+2026-11-16T16:26:38.4273932Z Get:17 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [238 kB]
+2026-11-16T16:26:38.5188070Z Get:18 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1229 kB]
+2026-11-16T16:26:38.6588463Z Get:19 http://security.ubuntu.com/ubuntu noble-security/universe Translation-en [248 kB]
+2026-11-16T16:26:38.7481626Z Get:20 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1788 kB]
+2026-11-16T16:26:38.8996438Z Get:21 http://security.ubuntu.com/ubuntu noble-security/restricted Translation-en [411 kB]
+2026-11-16T16:26:38.9926302Z Get:22 http://security.ubuntu.com/ubuntu noble-security/multiverse Translation-en [12.7 kB]
+2026-11-16T16:26:48.7515516Z Fetched 13.1 MB in 2s (8204 kB/s)
+2026-11-16T16:26:49.7543452Z Reading package lists...
+2026-11-16T16:26:49.7829449Z Reading package lists...
+2026-11-16T16:26:50.0124653Z Building dependency tree...
+2026-11-16T16:26:50.0128161Z Reading state information...
+2026-11-16T16:26:50.1705121Z The following additional packages will be installed:
+2026-11-16T16:26:50.1705880Z   binutils-aarch64-linux-gnu cpp-13-aarch64-linux-gnu cpp-aarch64-linux-gnu
+2026-11-16T16:26:50.1706385Z   cross-config dpkg-cross g++-13-aarch64-linux-gnu g++-aarch64-linux-gnu
+2026-11-16T16:26:50.1706863Z   gcc-13-aarch64-linux-gnu gcc-13-aarch64-linux-gnu-base gcc-13-cross-base
+2026-11-16T16:26:50.1707279Z   gcc-14-cross-base gcc-aarch64-linux-gnu libasan8-arm64-cross
+2026-11-16T16:26:50.1707974Z   libatomic1-arm64-cross libc6-arm64-cross libc6-dev-arm64-cross
+2026-11-16T16:26:50.1708473Z   libconfig-auto-perl libconfig-inifiles-perl libdebian-dpkgcross-perl
+2026-11-16T16:26:50.1709025Z   libfile-homedir-perl libfile-which-perl libgcc-13-dev-arm64-cross
+2026-11-16T16:26:50.1709875Z   libgcc-s1-arm64-cross libgomp1-arm64-cross libhwasan0-arm64-cross
+2026-11-16T16:26:50.1710278Z   libio-string-perl libitm1-arm64-cross liblsan0-arm64-cross
+2026-11-16T16:26:50.1710713Z   libstdc++-13-dev-arm64-cross libstdc++6-arm64-cross libtsan2-arm64-cross
+2026-11-16T16:26:50.1711172Z   libubsan1-arm64-cross libxml-simple-perl libyaml-libyaml-perl libyaml-perl
+2026-11-16T16:26:50.1711903Z   linux-libc-dev-arm64-cross
+2026-11-16T16:26:50.1720724Z Suggested packages:
+2026-11-16T16:26:50.1721185Z   binutils-doc gcc-13-locales cpp-13-doc cpp-doc binutils-multiarch gcc-13-doc
+2026-11-16T16:26:50.1721667Z   manpages-dev gdb-aarch64-linux-gnu gcc-doc libyaml-shell-perl
+2026-11-16T16:26:50.2886250Z The following NEW packages will be installed:
+2026-11-16T16:26:50.2886801Z   binutils-aarch64-linux-gnu cpp-13-aarch64-linux-gnu cpp-aarch64-linux-gnu
+2026-11-16T16:26:50.2887852Z   cross-config crossbuild-essential-arm64 dpkg-cross g++-13-aarch64-linux-gnu
+2026-11-16T16:26:50.2888447Z   g++-aarch64-linux-gnu gcc-13-aarch64-linux-gnu gcc-13-aarch64-linux-gnu-base
+2026-11-16T16:26:50.2888921Z   gcc-13-cross-base gcc-14-cross-base gcc-aarch64-linux-gnu
+2026-11-16T16:26:50.2889357Z   libasan8-arm64-cross libatomic1-arm64-cross libc6-arm64-cross
+2026-11-16T16:26:50.2889870Z   libc6-dev-arm64-cross libconfig-auto-perl libconfig-inifiles-perl
+2026-11-16T16:26:50.2890403Z   libdebian-dpkgcross-perl libfile-homedir-perl libfile-which-perl
+2026-11-16T16:26:50.2890917Z   libgcc-13-dev-arm64-cross libgcc-s1-arm64-cross libgomp1-arm64-cross
+2026-11-16T16:26:50.2891361Z   libhwasan0-arm64-cross libio-string-perl libitm1-arm64-cross
+2026-11-16T16:26:50.2895896Z   liblsan0-arm64-cross libstdc++-13-dev-arm64-cross libstdc++6-arm64-cross
+2026-11-16T16:26:50.2896397Z   libtsan2-arm64-cross libubsan1-arm64-cross libxml-simple-perl
+2026-11-16T16:26:50.2901006Z   libyaml-libyaml-perl libyaml-perl linux-libc-dev-arm64-cross ninja-build
+2026-11-16T16:26:50.3073303Z 0 upgraded, 38 newly installed, 0 to remove and 24 not upgraded.
+2026-11-16T16:26:50.3074025Z Need to get 60.4 MB of archives.
+2026-11-16T16:26:50.3074396Z After this operation, 236 MB of additional disk space will be used.
+2026-11-16T16:26:50.3074817Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [152 B]
+2026-11-16T16:26:50.3756814Z Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-aarch64-linux-gnu-base amd64 13.3.0-6ubuntu2~24.04.1cross1 [51.9 kB]
+2026-11-16T16:26:50.4557954Z Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 cpp-13-aarch64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1cross1 [10.8 MB]
+2026-11-16T16:26:50.7411457Z Get:4 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 cpp-aarch64-linux-gnu amd64 4:13.2.0-7ubuntu1 [5332 B]
+2026-11-16T16:26:50.7846156Z Get:5 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 binutils-aarch64-linux-gnu amd64 2.42-4ubuntu2.10 [3711 kB]
+2026-11-16T16:26:50.8858553Z Get:6 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-cross-base all 13.3.0-6ubuntu2~24.04.1cross1 [46.5 kB]
+2026-11-16T16:26:50.9291432Z Get:7 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-14-cross-base all 14.2.0-4ubuntu2~24.04.1cross1 [46.1 kB]
+2026-11-16T16:26:50.9711879Z Get:8 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libc6-arm64-cross all 2.39-0ubuntu8cross1 [1197 kB]
+2026-11-16T16:26:51.0605550Z Get:9 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgcc-s1-arm64-cross all 14.2.0-4ubuntu2~24.04.1cross1 [61.9 kB]
+2026-11-16T16:26:51.1658128Z Get:10 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgomp1-arm64-cross all 14.2.0-4ubuntu2~24.04.1cross1 [110 kB]
+2026-11-16T16:26:51.2110870Z Get:11 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libitm1-arm64-cross all 14.2.0-4ubuntu2~24.04.1cross1 [31.1 kB]
+2026-11-16T16:26:51.2533510Z Get:12 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libatomic1-arm64-cross all 14.2.0-4ubuntu2~24.04.1cross1 [11.5 kB]
+2026-11-16T16:26:51.2939347Z Get:13 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libasan8-arm64-cross all 14.2.0-4ubuntu2~24.04.1cross1 [524 kB]
+2026-11-16T16:26:51.3470006Z Get:14 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 liblsan0-arm64-cross all 14.2.0-4ubuntu2~24.04.1cross1 [238 kB]
+2026-11-16T16:26:51.4728378Z Get:15 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libtsan2-arm64-cross all 14.2.0-4ubuntu2~24.04.1cross1 [500 kB]
+2026-11-16T16:26:51.5231131Z Get:16 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libstdc++6-arm64-cross all 14.2.0-4ubuntu2~24.04.1cross1 [659 kB]
+2026-11-16T16:26:51.5801676Z Get:17 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libubsan1-arm64-cross all 14.2.0-4ubuntu2~24.04.1cross1 [219 kB]
+2026-11-16T16:26:51.6390412Z Get:18 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libhwasan0-arm64-cross all 14.2.0-4ubuntu2~24.04.1cross1 [304 kB]
+2026-11-16T16:26:51.6908467Z Get:19 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgcc-13-dev-arm64-cross all 13.3.0-6ubuntu2~24.04.1cross1 [2616 kB]
+2026-11-16T16:26:51.7834463Z Get:20 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-aarch64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1cross1 [21.1 MB]
+2026-11-16T16:26:52.1973322Z Get:21 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 gcc-aarch64-linux-gnu amd64 4:13.2.0-7ubuntu1 [1210 B]
+2026-11-16T16:26:52.2412485Z Get:22 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 linux-libc-dev-arm64-cross all 6.8.0-25.25cross1 [1375 kB]
+2026-11-16T16:26:52.3061607Z Get:23 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libc6-dev-arm64-cross all 2.39-0ubuntu8cross1 [1629 kB]
+2026-11-16T16:26:52.3786826Z Get:24 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libstdc++-13-dev-arm64-cross all 13.3.0-6ubuntu2~24.04.1cross1 [2656 kB]
+2026-11-16T16:26:52.4740770Z Get:25 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13-aarch64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1cross1 [12.2 MB]
+2026-11-16T16:26:52.7620739Z Get:26 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 g++-aarch64-linux-gnu amd64 4:13.2.0-7ubuntu1 [962 B]
+2026-11-16T16:26:52.8052099Z Get:27 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libconfig-inifiles-perl all 3.000003-2ubuntu0.1 [38.5 kB]
+2026-11-16T16:26:52.8481877Z Get:28 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libio-string-perl all 1.08-4 [11.1 kB]
+2026-11-16T16:26:52.8929602Z Get:29 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libxml-simple-perl all 2.25-2 [64.1 kB]
+2026-11-16T16:26:52.9381130Z Get:30 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libyaml-perl all 1.31-1ubuntu0.24.04.1 [56.3 kB]
+2026-11-16T16:26:52.9814347Z Get:31 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libconfig-auto-perl all 0.44-2 [17.1 kB]
+2026-11-16T16:26:53.0251589Z Get:32 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libfile-which-perl all 1.27-2 [12.5 kB]
+2026-11-16T16:26:53.0667208Z Get:33 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libfile-homedir-perl all 1.006-2 [37.0 kB]
+2026-11-16T16:26:53.1095905Z Get:34 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libdebian-dpkgcross-perl all 2.6.20 [15.6 kB]
+2026-11-16T16:26:53.1688822Z Get:35 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 cross-config all 2.6.20 [16.5 kB]
+2026-11-16T16:26:53.2106048Z Get:36 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 dpkg-cross all 2.6.20 [22.2 kB]
+2026-11-16T16:26:53.2523912Z Get:37 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 crossbuild-essential-arm64 all 12.10ubuntu1 [3874 B]
+2026-11-16T16:26:53.2961133Z Get:38 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libyaml-libyaml-perl amd64 0.89+ds-1ubuntu0.24.04.1 [30.7 kB]
+2026-11-16T16:26:53.3386893Z Get:39 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 ninja-build amd64 1.11.1-2 [129 kB]
+2026-11-16T16:26:54.1941048Z Fetched 60.4 MB in 3s (19.9 MB/s)
+2026-11-16T16:26:54.2151428Z Selecting previously unselected package gcc-13-aarch64-linux-gnu-base:amd64.
+2026-11-16T16:26:54.5231116Z (Reading database ... 
+2026-11-16T16:26:54.5231930Z (Reading database ... 5%
+2026-11-16T16:26:54.5232272Z (Reading database ... 10%
+2026-11-16T16:26:54.5232597Z (Reading database ... 15%
+2026-11-16T16:26:54.5232869Z (Reading database ... 20%
+2026-11-16T16:26:54.5233147Z (Reading database ... 25%
+2026-11-16T16:26:54.5233455Z (Reading database ... 30%
+2026-11-16T16:26:54.5233720Z (Reading database ... 35%
+2026-11-16T16:26:54.5233990Z (Reading database ... 40%
+2026-11-16T16:26:54.5234265Z (Reading database ... 45%
+2026-11-16T16:26:54.5234560Z (Reading database ... 50%
+2026-11-16T16:26:54.5633678Z (Reading database ... 55%
+2026-11-16T16:26:54.9485694Z (Reading database ... 60%
+2026-11-16T16:26:55.0510416Z (Reading database ... 65%
+2026-11-16T16:26:55.1659122Z (Reading database ... 70%
+2026-11-16T16:26:55.2650031Z (Reading database ... 75%
+2026-11-16T16:26:55.3900208Z (Reading database ... 80%
+2026-11-16T16:26:56.5848390Z (Reading database ... 85%
+2026-11-16T16:26:57.6272977Z (Reading database ... 90%
+2026-11-16T16:26:58.4910210Z (Reading database ... 95%
+2026-11-16T16:26:58.4910783Z (Reading database ... 100%
+2026-11-16T16:26:58.4911619Z (Reading database ... 216380 files and directories currently installed.)
+2026-11-16T16:26:58.4954626Z Preparing to unpack .../00-gcc-13-aarch64-linux-gnu-base_13.3.0-6ubuntu2~24.04.1cross1_amd64.deb ...
+2026-11-16T16:26:58.4975761Z Unpacking gcc-13-aarch64-linux-gnu-base:amd64 (13.3.0-6ubuntu2~24.04.1cross1) ...
+2026-11-16T16:26:58.5174034Z Selecting previously unselected package cpp-13-aarch64-linux-gnu.
+2026-11-16T16:26:58.5277645Z Preparing to unpack .../01-cpp-13-aarch64-linux-gnu_13.3.0-6ubuntu2~24.04.1cross1_amd64.deb ...
+2026-11-16T16:26:58.5304834Z Unpacking cpp-13-aarch64-linux-gnu (13.3.0-6ubuntu2~24.04.1cross1) ...
+2026-11-16T16:26:58.6598620Z Selecting previously unselected package cpp-aarch64-linux-gnu.
+2026-11-16T16:26:58.6703640Z Preparing to unpack .../02-cpp-aarch64-linux-gnu_4%3a13.2.0-7ubuntu1_amd64.deb ...
+2026-11-16T16:26:58.6707806Z Unpacking cpp-aarch64-linux-gnu (4:13.2.0-7ubuntu1) ...
+2026-11-16T16:26:58.6880863Z Selecting previously unselected package binutils-aarch64-linux-gnu.
+2026-11-16T16:26:58.6983902Z Preparing to unpack .../03-binutils-aarch64-linux-gnu_2.42-4ubuntu2.10_amd64.deb ...
+2026-11-16T16:26:58.7385799Z Unpacking binutils-aarch64-linux-gnu (2.42-4ubuntu2.10) ...
+2026-11-16T16:26:58.8423784Z Selecting previously unselected package gcc-13-cross-base.
+2026-11-16T16:26:58.8527817Z Preparing to unpack .../04-gcc-13-cross-base_13.3.0-6ubuntu2~24.04.1cross1_all.deb ...
+2026-11-16T16:26:58.8531975Z Unpacking gcc-13-cross-base (13.3.0-6ubuntu2~24.04.1cross1) ...
+2026-11-16T16:26:58.8675802Z Selecting previously unselected package gcc-14-cross-base.
+2026-11-16T16:26:58.8778761Z Preparing to unpack .../05-gcc-14-cross-base_14.2.0-4ubuntu2~24.04.1cross1_all.deb ...
+2026-11-16T16:26:58.8782518Z Unpacking gcc-14-cross-base (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:26:58.8930632Z Selecting previously unselected package libc6-arm64-cross.
+2026-11-16T16:26:58.9035966Z Preparing to unpack .../06-libc6-arm64-cross_2.39-0ubuntu8cross1_all.deb ...
+2026-11-16T16:26:58.9041817Z Unpacking libc6-arm64-cross (2.39-0ubuntu8cross1) ...
+2026-11-16T16:26:58.9324789Z Selecting previously unselected package libgcc-s1-arm64-cross.
+2026-11-16T16:26:58.9430503Z Preparing to unpack .../07-libgcc-s1-arm64-cross_14.2.0-4ubuntu2~24.04.1cross1_all.deb ...
+2026-11-16T16:26:58.9434618Z Unpacking libgcc-s1-arm64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:26:58.9580323Z Selecting previously unselected package libgomp1-arm64-cross.
+2026-11-16T16:26:58.9684922Z Preparing to unpack .../08-libgomp1-arm64-cross_14.2.0-4ubuntu2~24.04.1cross1_all.deb ...
+2026-11-16T16:26:58.9689623Z Unpacking libgomp1-arm64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:26:58.9852125Z Selecting previously unselected package libitm1-arm64-cross.
+2026-11-16T16:26:58.9957149Z Preparing to unpack .../09-libitm1-arm64-cross_14.2.0-4ubuntu2~24.04.1cross1_all.deb ...
+2026-11-16T16:26:58.9961693Z Unpacking libitm1-arm64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:26:59.0111649Z Selecting previously unselected package libatomic1-arm64-cross.
+2026-11-16T16:26:59.0217307Z Preparing to unpack .../10-libatomic1-arm64-cross_14.2.0-4ubuntu2~24.04.1cross1_all.deb ...
+2026-11-16T16:26:59.0221938Z Unpacking libatomic1-arm64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:26:59.0363868Z Selecting previously unselected package libasan8-arm64-cross.
+2026-11-16T16:26:59.0472471Z Preparing to unpack .../11-libasan8-arm64-cross_14.2.0-4ubuntu2~24.04.1cross1_all.deb ...
+2026-11-16T16:26:59.0478708Z Unpacking libasan8-arm64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:26:59.0714306Z Selecting previously unselected package liblsan0-arm64-cross.
+2026-11-16T16:26:59.0820834Z Preparing to unpack .../12-liblsan0-arm64-cross_14.2.0-4ubuntu2~24.04.1cross1_all.deb ...
+2026-11-16T16:26:59.0825916Z Unpacking liblsan0-arm64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:26:59.1008338Z Selecting previously unselected package libtsan2-arm64-cross.
+2026-11-16T16:26:59.1114979Z Preparing to unpack .../13-libtsan2-arm64-cross_14.2.0-4ubuntu2~24.04.1cross1_all.deb ...
+2026-11-16T16:26:59.1119728Z Unpacking libtsan2-arm64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:26:59.1346832Z Selecting previously unselected package libstdc++6-arm64-cross.
+2026-11-16T16:26:59.1451398Z Preparing to unpack .../14-libstdc++6-arm64-cross_14.2.0-4ubuntu2~24.04.1cross1_all.deb ...
+2026-11-16T16:26:59.1456684Z Unpacking libstdc++6-arm64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:26:59.1718209Z Selecting previously unselected package libubsan1-arm64-cross.
+2026-11-16T16:26:59.1823593Z Preparing to unpack .../15-libubsan1-arm64-cross_14.2.0-4ubuntu2~24.04.1cross1_all.deb ...
+2026-11-16T16:26:59.1828297Z Unpacking libubsan1-arm64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:26:59.2014761Z Selecting previously unselected package libhwasan0-arm64-cross.
+2026-11-16T16:26:59.2121394Z Preparing to unpack .../16-libhwasan0-arm64-cross_14.2.0-4ubuntu2~24.04.1cross1_all.deb ...
+2026-11-16T16:26:59.2126084Z Unpacking libhwasan0-arm64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:26:59.2320374Z Selecting previously unselected package libgcc-13-dev-arm64-cross.
+2026-11-16T16:26:59.2422828Z Preparing to unpack .../17-libgcc-13-dev-arm64-cross_13.3.0-6ubuntu2~24.04.1cross1_all.deb ...
+2026-11-16T16:26:59.2428644Z Unpacking libgcc-13-dev-arm64-cross (13.3.0-6ubuntu2~24.04.1cross1) ...
+2026-11-16T16:26:59.3209672Z Selecting previously unselected package gcc-13-aarch64-linux-gnu.
+2026-11-16T16:26:59.3318445Z Preparing to unpack .../18-gcc-13-aarch64-linux-gnu_13.3.0-6ubuntu2~24.04.1cross1_amd64.deb ...
+2026-11-16T16:26:59.3346898Z Unpacking gcc-13-aarch64-linux-gnu (13.3.0-6ubuntu2~24.04.1cross1) ...
+2026-11-16T16:26:59.5724026Z Selecting previously unselected package gcc-aarch64-linux-gnu.
+2026-11-16T16:26:59.5831168Z Preparing to unpack .../19-gcc-aarch64-linux-gnu_4%3a13.2.0-7ubuntu1_amd64.deb ...
+2026-11-16T16:26:59.5836701Z Unpacking gcc-aarch64-linux-gnu (4:13.2.0-7ubuntu1) ...
+2026-11-16T16:26:59.5988809Z Selecting previously unselected package linux-libc-dev-arm64-cross.
+2026-11-16T16:26:59.6093041Z Preparing to unpack .../20-linux-libc-dev-arm64-cross_6.8.0-25.25cross1_all.deb ...
+2026-11-16T16:26:59.6097965Z Unpacking linux-libc-dev-arm64-cross (6.8.0-25.25cross1) ...
+2026-11-16T16:26:59.6865373Z Selecting previously unselected package libc6-dev-arm64-cross.
+2026-11-16T16:26:59.6974966Z Preparing to unpack .../21-libc6-dev-arm64-cross_2.39-0ubuntu8cross1_all.deb ...
+2026-11-16T16:26:59.6979234Z Unpacking libc6-dev-arm64-cross (2.39-0ubuntu8cross1) ...
+2026-11-16T16:26:59.7630587Z Selecting previously unselected package libstdc++-13-dev-arm64-cross.
+2026-11-16T16:26:59.7735309Z Preparing to unpack .../22-libstdc++-13-dev-arm64-cross_13.3.0-6ubuntu2~24.04.1cross1_all.deb ...
+2026-11-16T16:26:59.7740025Z Unpacking libstdc++-13-dev-arm64-cross (13.3.0-6ubuntu2~24.04.1cross1) ...
+2026-11-16T16:26:59.9025426Z Selecting previously unselected package g++-13-aarch64-linux-gnu.
+2026-11-16T16:26:59.9135309Z Preparing to unpack .../23-g++-13-aarch64-linux-gnu_13.3.0-6ubuntu2~24.04.1cross1_amd64.deb ...
+2026-11-16T16:26:59.9162425Z Unpacking g++-13-aarch64-linux-gnu (13.3.0-6ubuntu2~24.04.1cross1) ...
+2026-11-16T16:27:00.0540388Z Selecting previously unselected package g++-aarch64-linux-gnu.
+2026-11-16T16:27:00.0645996Z Preparing to unpack .../24-g++-aarch64-linux-gnu_4%3a13.2.0-7ubuntu1_amd64.deb ...
+2026-11-16T16:27:00.0650616Z Unpacking g++-aarch64-linux-gnu (4:13.2.0-7ubuntu1) ...
+2026-11-16T16:27:00.0789217Z Selecting previously unselected package libconfig-inifiles-perl.
+2026-11-16T16:27:00.0895052Z Preparing to unpack .../25-libconfig-inifiles-perl_3.000003-2ubuntu0.1_all.deb ...
+2026-11-16T16:27:00.0898419Z Unpacking libconfig-inifiles-perl (3.000003-2ubuntu0.1) ...
+2026-11-16T16:27:00.1060841Z Selecting previously unselected package libio-string-perl.
+2026-11-16T16:27:00.1166653Z Preparing to unpack .../26-libio-string-perl_1.08-4_all.deb ...
+2026-11-16T16:27:00.1172480Z Unpacking libio-string-perl (1.08-4) ...
+2026-11-16T16:27:00.1326399Z Selecting previously unselected package libxml-simple-perl.
+2026-11-16T16:27:00.1434226Z Preparing to unpack .../27-libxml-simple-perl_2.25-2_all.deb ...
+2026-11-16T16:27:00.1438005Z Unpacking libxml-simple-perl (2.25-2) ...
+2026-11-16T16:27:00.1906389Z Selecting previously unselected package libyaml-perl.
+2026-11-16T16:27:00.2013047Z Preparing to unpack .../28-libyaml-perl_1.31-1ubuntu0.24.04.1_all.deb ...
+2026-11-16T16:27:00.2018264Z Unpacking libyaml-perl (1.31-1ubuntu0.24.04.1) ...
+2026-11-16T16:27:00.2214657Z Selecting previously unselected package libconfig-auto-perl.
+2026-11-16T16:27:00.2324428Z Preparing to unpack .../29-libconfig-auto-perl_0.44-2_all.deb ...
+2026-11-16T16:27:00.2329074Z Unpacking libconfig-auto-perl (0.44-2) ...
+2026-11-16T16:27:00.2470917Z Selecting previously unselected package libfile-which-perl.
+2026-11-16T16:27:00.2576076Z Preparing to unpack .../30-libfile-which-perl_1.27-2_all.deb ...
+2026-11-16T16:27:00.2581291Z Unpacking libfile-which-perl (1.27-2) ...
+2026-11-16T16:27:00.2723491Z Selecting previously unselected package libfile-homedir-perl.
+2026-11-16T16:27:00.2829162Z Preparing to unpack .../31-libfile-homedir-perl_1.006-2_all.deb ...
+2026-11-16T16:27:00.2833062Z Unpacking libfile-homedir-perl (1.006-2) ...
+2026-11-16T16:27:00.2989371Z Selecting previously unselected package libdebian-dpkgcross-perl.
+2026-11-16T16:27:00.3095791Z Preparing to unpack .../32-libdebian-dpkgcross-perl_2.6.20_all.deb ...
+2026-11-16T16:27:00.3101541Z Unpacking libdebian-dpkgcross-perl (2.6.20) ...
+2026-11-16T16:27:00.3255762Z Selecting previously unselected package cross-config.
+2026-11-16T16:27:00.3362985Z Preparing to unpack .../33-cross-config_2.6.20_all.deb ...
+2026-11-16T16:27:00.3366564Z Unpacking cross-config (2.6.20) ...
+2026-11-16T16:27:00.3529699Z Selecting previously unselected package dpkg-cross.
+2026-11-16T16:27:00.3638178Z Preparing to unpack .../34-dpkg-cross_2.6.20_all.deb ...
+2026-11-16T16:27:00.3640761Z Unpacking dpkg-cross (2.6.20) ...
+2026-11-16T16:27:00.3796241Z Selecting previously unselected package crossbuild-essential-arm64.
+2026-11-16T16:27:00.3901790Z Preparing to unpack .../35-crossbuild-essential-arm64_12.10ubuntu1_all.deb ...
+2026-11-16T16:27:00.3906185Z Unpacking crossbuild-essential-arm64 (12.10ubuntu1) ...
+2026-11-16T16:27:00.4048375Z Selecting previously unselected package libyaml-libyaml-perl.
+2026-11-16T16:27:00.4153754Z Preparing to unpack .../36-libyaml-libyaml-perl_0.89+ds-1ubuntu0.24.04.1_amd64.deb ...
+2026-11-16T16:27:00.4158768Z Unpacking libyaml-libyaml-perl (0.89+ds-1ubuntu0.24.04.1) ...
+2026-11-16T16:27:00.4310720Z Selecting previously unselected package ninja-build.
+2026-11-16T16:27:00.4416490Z Preparing to unpack .../37-ninja-build_1.11.1-2_amd64.deb ...
+2026-11-16T16:27:00.4422444Z Unpacking ninja-build (1.11.1-2) ...
+2026-11-16T16:27:00.4789899Z Setting up libconfig-inifiles-perl (3.000003-2ubuntu0.1) ...
+2026-11-16T16:27:00.4801981Z Setting up libfile-which-perl (1.27-2) ...
+2026-11-16T16:27:00.4812521Z Setting up libyaml-libyaml-perl (0.89+ds-1ubuntu0.24.04.1) ...
+2026-11-16T16:27:00.4824464Z Setting up binutils-aarch64-linux-gnu (2.42-4ubuntu2.10) ...
+2026-11-16T16:27:00.4835018Z Setting up gcc-14-cross-base (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:27:00.4845536Z Setting up libyaml-perl (1.31-1ubuntu0.24.04.1) ...
+2026-11-16T16:27:00.4855807Z Setting up ninja-build (1.11.1-2) ...
+2026-11-16T16:27:00.4865647Z Setting up libio-string-perl (1.08-4) ...
+2026-11-16T16:27:00.4878020Z Setting up cross-config (2.6.20) ...
+2026-11-16T16:27:00.4977153Z Setting up gcc-13-cross-base (13.3.0-6ubuntu2~24.04.1cross1) ...
+2026-11-16T16:27:00.4987879Z Setting up libc6-arm64-cross (2.39-0ubuntu8cross1) ...
+2026-11-16T16:27:00.4997763Z Setting up libitm1-arm64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:27:00.5009344Z Setting up libxml-simple-perl (2.25-2) ...
+2026-11-16T16:27:00.5019550Z Setting up linux-libc-dev-arm64-cross (6.8.0-25.25cross1) ...
+2026-11-16T16:27:00.5029250Z Setting up gcc-13-aarch64-linux-gnu-base:amd64 (13.3.0-6ubuntu2~24.04.1cross1) ...
+2026-11-16T16:27:00.5038805Z Setting up libfile-homedir-perl (1.006-2) ...
+2026-11-16T16:27:00.5048877Z Setting up libgcc-s1-arm64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:27:00.5058261Z Setting up libatomic1-arm64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:27:00.5069398Z Setting up liblsan0-arm64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:27:00.5084217Z Setting up libgomp1-arm64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:27:00.5094547Z Setting up cpp-13-aarch64-linux-gnu (13.3.0-6ubuntu2~24.04.1cross1) ...
+2026-11-16T16:27:00.5105253Z Setting up libconfig-auto-perl (0.44-2) ...
+2026-11-16T16:27:00.5114310Z Setting up libhwasan0-arm64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:27:00.5125619Z Setting up libc6-dev-arm64-cross (2.39-0ubuntu8cross1) ...
+2026-11-16T16:27:00.5136061Z Setting up libstdc++6-arm64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:27:00.5145654Z Setting up cpp-aarch64-linux-gnu (4:13.2.0-7ubuntu1) ...
+2026-11-16T16:27:00.5155565Z Setting up libasan8-arm64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:27:00.5166863Z Setting up libtsan2-arm64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:27:00.5178315Z Setting up libdebian-dpkgcross-perl (2.6.20) ...
+2026-11-16T16:27:00.5191249Z Setting up libubsan1-arm64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+2026-11-16T16:27:00.5203090Z Setting up libgcc-13-dev-arm64-cross (13.3.0-6ubuntu2~24.04.1cross1) ...
+2026-11-16T16:27:00.5213442Z Setting up dpkg-cross (2.6.20) ...
+2026-11-16T16:27:00.5247768Z Setting up gcc-13-aarch64-linux-gnu (13.3.0-6ubuntu2~24.04.1cross1) ...
+2026-11-16T16:27:00.5260485Z Setting up libstdc++-13-dev-arm64-cross (13.3.0-6ubuntu2~24.04.1cross1) ...
+2026-11-16T16:27:00.5271250Z Setting up g++-13-aarch64-linux-gnu (13.3.0-6ubuntu2~24.04.1cross1) ...
+2026-11-16T16:27:00.5281531Z Setting up gcc-aarch64-linux-gnu (4:13.2.0-7ubuntu1) ...
+2026-11-16T16:27:00.5293939Z Setting up g++-aarch64-linux-gnu (4:13.2.0-7ubuntu1) ...
+2026-11-16T16:27:00.5305564Z Setting up crossbuild-essential-arm64 (12.10ubuntu1) ...
+2026-11-16T16:27:00.5321650Z Processing triggers for man-db (2.12.0-4build2) ...
+2026-11-16T16:27:00.5345533Z Not building database; man-db/auto-update is not 'true'.
+2026-11-16T16:27:00.5355635Z Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+2026-11-16T16:27:06.2624651Z 
+2026-11-16T16:27:06.2625804Z Running kernel seems to be up-to-date.
+2026-11-16T16:27:06.2626392Z 
+2026-11-16T16:27:06.2626754Z No services need to be restarted.
+2026-11-16T16:27:06.2626908Z 
+2026-11-16T16:27:06.2627057Z No containers need to be restarted.
+2026-11-16T16:27:06.2627211Z 
+2026-11-16T16:27:06.2627559Z No user sessions are running outdated binaries.
+2026-11-16T16:27:06.2627901Z 
+2026-11-16T16:27:06.2628065Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-11-16T16:27:07.8678271Z Defaulting to user installation because normal site-packages is not writeable
+2026-11-16T16:27:08.9793597Z Collecting cmake>=3.31
+2026-11-16T16:27:09.0070705Z   Downloading cmake-4.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (7.0 kB)
+2026-11-16T16:27:09.0135980Z Downloading cmake-4.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (30.2 MB)
+2026-11-16T16:27:09.2527778Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 30.2/30.2 MB 96.1 MB/s eta 0:00:00
+2026-11-16T16:27:09.5115752Z Installing collected packages: cmake
+2026-11-16T16:27:10.0908856Z Successfully installed cmake-4.4.5
+2026-11-16T16:27:10.1669822Z ##[group]Run cmake --version
+2026-11-16T16:27:10.1670116Z [36;1mcmake --version[0m
+2026-11-16T16:27:10.1670399Z [36;1maarch64-linux-gnu-g++ --version[0m
+2026-11-16T16:27:10.1670689Z [36;1mninja --version[0m
+2026-11-16T16:27:10.1697936Z shell: /usr/bin/bash -e {0}
+2026-11-16T16:27:10.1698218Z ##[endgroup]
+2026-11-16T16:27:10.2616787Z cmake version 4.4.5
+2026-11-16T16:27:10.2617045Z 
+2026-11-16T16:27:10.2617669Z CMake suite maintained and supported by Kitware (kitware.com/cmake).
+2026-11-16T16:27:10.2629460Z aarch64-linux-gnu-g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+2026-11-16T16:27:10.2629991Z Copyright (C) 2023 Free Software Foundation, Inc.
+2026-11-16T16:27:10.2630714Z This is free software; see the source for copying conditions.  There is NO
+2026-11-16T16:27:10.2631316Z warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+2026-11-16T16:27:10.2631600Z 
+2026-11-16T16:27:10.2653241Z 1.13.2
+2026-11-16T16:27:10.2688640Z ##[group]Run cmake --workflow --preset cp0-cross-package
+2026-11-16T16:27:10.2689060Z [36;1mcmake --workflow --preset cp0-cross-package[0m
+2026-11-16T16:27:10.2716749Z shell: /usr/bin/bash -e {0}
+2026-11-16T16:27:10.2717049Z ##[endgroup]
+2026-11-16T16:27:10.3636695Z Executing workflow step 1 of 3: configure preset "cp0-cross"
+2026-11-16T16:27:10.3637307Z 
+2026-11-16T16:27:10.3698116Z -- CM0 SDK sysroot missing, downloading BSP: https://github.com/CardputerZero/M5CardputerZero-UserDemo/releases/download/v0.0.4/sdk_bsp.tar.gz
+2026-11-16T16:27:10.6549858Z -- [download 0% complete]
+2026-11-16T16:27:10.6879182Z -- [download 1% complete]
+2026-11-16T16:27:10.7352873Z -- [download 2% complete]
+2026-11-16T16:27:10.7801335Z -- [download 3% complete]
+2026-11-16T16:27:10.8456118Z -- [download 4% complete]
+2026-11-16T16:27:10.8697716Z -- [download 5% complete]
+2026-11-16T16:27:10.9142473Z -- [download 6% complete]
+2026-11-16T16:27:10.9408957Z -- [download 7% complete]
+2026-11-16T16:27:10.9734026Z -- [download 8% complete]
+2026-11-16T16:27:11.0160938Z -- [download 9% complete]
+2026-11-16T16:27:11.0486439Z -- [download 10% complete]
+2026-11-16T16:27:11.0825554Z -- [download 11% complete]
+2026-11-16T16:27:11.1172131Z -- [download 12% complete]
+2026-11-16T16:27:11.1720075Z -- [download 13% complete]
+2026-11-16T16:27:11.1971823Z -- [download 14% complete]
+2026-11-16T16:27:11.2281991Z -- [download 15% complete]
+2026-11-16T16:27:11.2528894Z -- [download 16% complete]
+2026-11-16T16:27:11.2670698Z -- [download 17% complete]
+2026-11-16T16:27:11.3203945Z -- [download 18% complete]
+2026-11-16T16:27:11.3918819Z -- [download 19% complete]
+2026-11-16T16:27:11.4260707Z -- [download 20% complete]
+2026-11-16T16:27:11.4474075Z -- [download 21% complete]
+2026-11-16T16:27:11.4831643Z -- [download 22% complete]
+2026-11-16T16:27:11.5583557Z -- [download 23% complete]
+2026-11-16T16:27:11.5929909Z -- [download 24% complete]
+2026-11-16T16:27:11.6206943Z -- [download 25% complete]
+2026-11-16T16:27:11.6400984Z -- [download 26% complete]
+2026-11-16T16:27:11.6744148Z -- [download 27% complete]
+2026-11-16T16:27:11.7641806Z -- [download 28% complete]
+2026-11-16T16:27:11.7811154Z -- [download 29% complete]
+2026-11-16T16:27:11.8265239Z -- [download 30% complete]
+2026-11-16T16:27:11.8432238Z -- [download 31% complete]
+2026-11-16T16:27:11.8879932Z -- [download 32% complete]
+2026-11-16T16:27:11.9108933Z -- [download 33% complete]
+2026-11-16T16:27:11.9278968Z -- [download 34% complete]
+2026-11-16T16:27:11.9603262Z -- [download 35% complete]
+2026-11-16T16:27:11.9756798Z -- [download 36% complete]
+2026-11-16T16:27:12.0215601Z -- [download 37% complete]
+2026-11-16T16:27:12.0685824Z -- [download 38% complete]
+2026-11-16T16:27:12.0934761Z -- [download 39% complete]
+2026-11-16T16:27:12.1379268Z -- [download 40% complete]
+2026-11-16T16:27:12.1522917Z -- [download 41% complete]
+2026-11-16T16:27:12.2015240Z -- [download 42% complete]
+2026-11-16T16:27:12.2152416Z -- [download 43% complete]
+2026-11-16T16:27:12.2423279Z -- [download 44% complete]
+2026-11-16T16:27:12.2597232Z -- [download 45% complete]
+2026-11-16T16:27:12.2730258Z -- [download 46% complete]
+2026-11-16T16:27:12.3063379Z -- [download 47% complete]
+2026-11-16T16:27:12.3235982Z -- [download 48% complete]
+2026-11-16T16:27:12.3566925Z -- [download 49% complete]
+2026-11-16T16:27:12.3784781Z -- [download 50% complete]
+2026-11-16T16:27:12.3925657Z -- [download 51% complete]
+2026-11-16T16:27:12.4406580Z -- [download 52% complete]
+2026-11-16T16:27:12.4968826Z -- [download 53% complete]
+2026-11-16T16:27:12.5323673Z -- [download 54% complete]
+2026-11-16T16:27:12.5452123Z -- [download 55% complete]
+2026-11-16T16:27:12.6062174Z -- [download 56% complete]
+2026-11-16T16:27:12.6606989Z -- [download 57% complete]
+2026-11-16T16:27:12.7341586Z -- [download 58% complete]
+2026-11-16T16:27:12.7691373Z -- [download 59% complete]
+2026-11-16T16:27:12.7851906Z -- [download 60% complete]
+2026-11-16T16:27:12.8225272Z -- [download 61% complete]
+2026-11-16T16:27:12.8380919Z -- [download 62% complete]
+2026-11-16T16:27:12.8520823Z -- [download 63% complete]
+2026-11-16T16:27:12.9050937Z -- [download 64% complete]
+2026-11-16T16:27:12.9337691Z -- [download 65% complete]
+2026-11-16T16:27:12.9693012Z -- [download 66% complete]
+2026-11-16T16:27:12.9896900Z -- [download 67% complete]
+2026-11-16T16:27:13.0087800Z -- [download 68% complete]
+2026-11-16T16:27:13.0936428Z -- [download 69% complete]
+2026-11-16T16:27:13.1409996Z -- [download 70% complete]
+2026-11-16T16:27:13.1814936Z -- [download 71% complete]
+2026-11-16T16:27:13.2011965Z -- [download 72% complete]
+2026-11-16T16:27:13.2208793Z -- [download 73% complete]
+2026-11-16T16:27:13.2399894Z -- [download 74% complete]
+2026-11-16T16:27:13.2526468Z -- [download 75% complete]
+2026-11-16T16:27:13.2912464Z -- [download 76% complete]
+2026-11-16T16:27:13.3216834Z -- [download 77% complete]
+2026-11-16T16:27:13.3700095Z -- [download 78% complete]
+2026-11-16T16:27:13.3940619Z -- [download 79% complete]
+2026-11-16T16:27:13.4274681Z -- [download 80% complete]
+2026-11-16T16:27:13.4485398Z -- [download 81% complete]
+2026-11-16T16:27:13.4723020Z -- [download 82% complete]
+2026-11-16T16:27:13.5002628Z -- [download 83% complete]
+2026-11-16T16:27:13.5659507Z -- [download 84% complete]
+2026-11-16T16:27:13.6018920Z -- [download 85% complete]
+2026-11-16T16:27:13.6607828Z -- [download 86% complete]
+2026-11-16T16:27:13.6728789Z -- [download 87% complete]
+2026-11-16T16:27:13.6968395Z -- [download 88% complete]
+2026-11-16T16:27:13.7353920Z -- [download 89% complete]
+2026-11-16T16:27:13.7876097Z -- [download 90% complete]
+2026-11-16T16:27:13.8385924Z -- [download 91% complete]
+2026-11-16T16:27:13.8665288Z -- [download 92% complete]
+2026-11-16T16:27:13.9048094Z -- [download 93% complete]
+2026-11-16T16:27:13.9212676Z -- [download 94% complete]
+2026-11-16T16:27:13.9624844Z -- [download 95% complete]
+2026-11-16T16:27:13.9799129Z -- [download 96% complete]
+2026-11-16T16:27:14.0116953Z -- [download 97% complete]
+2026-11-16T16:27:14.0415356Z -- [download 98% complete]
+2026-11-16T16:27:14.0579430Z -- [download 99% complete]
+2026-11-16T16:27:14.0808350Z -- [download 100% complete]
+2026-11-16T16:27:14.0874370Z -- Extracting CM0 BSP to /home/runner/work/cz-app/cz-app/.cache/sdk_bsp-src
+2026-11-16T16:27:18.4438220Z -- The C compiler identification is GNU 13.3.0
+2026-11-16T16:27:18.4949304Z -- The CXX compiler identification is GNU 13.3.0
+2026-11-16T16:27:18.5006965Z -- Detecting C compiler ABI info
+2026-11-16T16:27:18.5396995Z -- Detecting C compiler ABI info - done
+2026-11-16T16:27:18.5515078Z -- Check for working C compiler: /usr/bin/aarch64-linux-gnu-gcc - skipped
+2026-11-16T16:27:18.5517324Z -- Detecting C compile features
+2026-11-16T16:27:18.5520748Z -- Detecting C compile features - done
+2026-11-16T16:27:18.5618011Z -- Detecting CXX compiler ABI info
+2026-11-16T16:27:18.6071579Z -- Detecting CXX compiler ABI info - done
+2026-11-16T16:27:18.6192147Z -- Check for working CXX compiler: /usr/bin/aarch64-linux-gnu-g++ - skipped
+2026-11-16T16:27:18.6194791Z -- Detecting CXX compile features
+2026-11-16T16:27:18.6200520Z -- Detecting CXX compile features - done
+2026-11-16T16:27:18.6388307Z Cloning into 'lvgl-src'...
+2026-11-16T16:27:24.0370498Z HEAD is now at 85aa60d1 chore: release v9.5.0 (#9753)
+2026-11-16T16:27:24.0712267Z -- The ASM compiler identification is GNU
+2026-11-16T16:27:24.0728304Z -- Found assembler: /usr/bin/aarch64-linux-gnu-gcc
+2026-11-16T16:27:24.0875559Z -- /home/runner/work/cz-app/cz-app/src/config/lv_conf.h
+2026-11-16T16:27:24.0876084Z -- Using configuration: /home/runner/work/cz-app/cz-app/src/config/lv_conf.h
+2026-11-16T16:27:24.0876592Z -- Enabling the building of ThorVG internal
+2026-11-16T16:27:24.0881258Z -- Configuring CM0/aarch64 Linux build
+2026-11-16T16:27:24.0881716Z -- Using CM0 SDK root: /home/runner/work/cz-app/cz-app/.cache/sdk_bsp-src
+2026-11-16T16:27:24.0882299Z -- Using CM0 dependency root: /home/runner/work/cz-app/cz-app/.cache/sdk_bsp-src
+2026-11-16T16:27:24.0915766Z -- Found multiarch include: /home/runner/work/cz-app/cz-app/.cache/sdk_bsp-src/usr/include/aarch64-linux-gnu
+2026-11-16T16:27:24.0941150Z -- Missing fmt in BSP sysroot, fetching from GitHub because CM0_ALLOW_FETCH_DEPS=ON
+2026-11-16T16:27:24.1025401Z Cloning into 'fmt-src'...
+2026-11-16T16:27:25.5799070Z HEAD is now at f5e5435 Update version
+2026-11-16T16:27:25.6067284Z -- Version: 10.1.0
+2026-11-16T16:27:25.6068098Z -- Build type: 
+2026-11-16T16:27:25.6149419Z -- Configuring done (15.2s)
+2026-11-16T16:27:25.7029207Z -- Generating done (0.1s)
+2026-11-16T16:27:25.7033133Z -- Build files have been written to: /home/runner/work/cz-app/cz-app/build/cp0-cross
+2026-11-16T16:27:25.7117609Z 
+2026-11-16T16:27:25.7118623Z Executing workflow step 2 of 3: build preset "cp0-cross-rel"
+2026-11-16T16:27:25.7119016Z 
+2026-11-16T16:27:25.7205579Z [0/2] Re-checking globbed directories...
+2026-11-16T16:27:25.7499197Z [1/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgCapi.cpp.o
+2026-11-16T16:27:25.7536069Z [2/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgFill.cpp.o
+2026-11-16T16:27:25.7563223Z [3/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgCanvas.cpp.o
+2026-11-16T16:27:25.7578775Z [4/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgAnimation.cpp.o
+2026-11-16T16:27:25.7598535Z [5/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgCompressor.cpp.o
+2026-11-16T16:27:25.7629016Z [6/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgAccessor.cpp.o
+2026-11-16T16:27:25.7630323Z [7/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgInitializer.cpp.o
+2026-11-16T16:27:25.7688645Z [8/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgLoader.cpp.o
+2026-11-16T16:27:25.7714573Z [9/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgLottieExpressions.cpp.o
+2026-11-16T16:27:25.7745823Z [10/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgGlCanvas.cpp.o
+2026-11-16T16:27:25.7759154Z [11/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgLottieAnimation.cpp.o
+2026-11-16T16:27:25.7828815Z [12/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgLottieBuilder.cpp.o
+2026-11-16T16:27:25.7860131Z [13/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgLottieInterpolator.cpp.o
+2026-11-16T16:27:25.7908491Z [14/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgLottieModel.cpp.o
+2026-11-16T16:27:25.7911473Z [15/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgLottieModifier.cpp.o
+2026-11-16T16:27:25.7978861Z [16/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgLottieLoader.cpp.o
+2026-11-16T16:27:25.8048775Z [17/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgLottieParser.cpp.o
+2026-11-16T16:27:25.8091661Z [18/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgPaint.cpp.o
+2026-11-16T16:27:25.8100245Z [19/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgLottieParserHandler.cpp.o
+2026-11-16T16:27:25.8102268Z [20/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgMath.cpp.o
+2026-11-16T16:27:25.8118668Z [21/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgPicture.cpp.o
+2026-11-16T16:27:25.8140316Z [22/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgRawLoader.cpp.o
+2026-11-16T16:27:25.8278637Z [23/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgRender.cpp.o
+2026-11-16T16:27:25.8288035Z [24/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgShape.cpp.o
+2026-11-16T16:27:25.8299099Z [25/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgScene.cpp.o
+2026-11-16T16:27:25.8314319Z [26/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgSaver.cpp.o
+2026-11-16T16:27:25.8350655Z [27/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgStr.cpp.o
+2026-11-16T16:27:25.8428838Z [28/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgSvgCssStyle.cpp.o
+2026-11-16T16:27:25.8478746Z [29/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgSvgSceneBuilder.cpp.o
+2026-11-16T16:27:25.8539872Z [30/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgSvgLoader.cpp.o
+2026-11-16T16:27:25.8566709Z [31/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgSwCanvas.cpp.o
+2026-11-16T16:27:25.8577768Z [32/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgSvgPath.cpp.o
+2026-11-16T16:27:25.8621212Z [33/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgSvgUtil.cpp.o
+2026-11-16T16:27:25.8638653Z [34/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgSwFill.cpp.o
+2026-11-16T16:27:25.8698900Z [35/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgSwMath.cpp.o
+2026-11-16T16:27:25.8755681Z [36/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgSwImage.cpp.o
+2026-11-16T16:27:25.8811043Z [37/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgSwPostEffect.cpp.o
+2026-11-16T16:27:25.8838643Z [38/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgSwRaster.cpp.o
+2026-11-16T16:27:25.8840221Z [39/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgSwMemPool.cpp.o
+2026-11-16T16:27:25.8864641Z [40/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgSwRenderer.cpp.o
+2026-11-16T16:27:25.8924994Z [41/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgSwShape.cpp.o
+2026-11-16T16:27:25.8955706Z [42/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgSwRle.cpp.o
+2026-11-16T16:27:25.9008949Z [43/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgSwStroke.cpp.o
+2026-11-16T16:27:25.9040570Z [44/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgTaskScheduler.cpp.o
+2026-11-16T16:27:25.9045069Z [45/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgText.cpp.o
+2026-11-16T16:27:25.9068697Z [46/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgWgCanvas.cpp.o
+2026-11-16T16:27:25.9238780Z [47/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl_thorvg.dir/Release/src/libs/thorvg/tvgXmlParser.cpp.o
+2026-11-16T16:27:26.0689294Z [48/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/core/lv_obj_id_builtin.c.o
+2026-11-16T16:27:26.0974138Z [49/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/core/lv_obj_class.c.o
+2026-11-16T16:27:26.1148881Z [50/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/core/lv_obj_event.c.o
+2026-11-16T16:27:26.1493155Z [51/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/core/lv_obj_property.c.o
+2026-11-16T16:27:26.1829505Z [52/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/core/lv_group.c.o
+2026-11-16T16:27:26.3529170Z [53/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/core/lv_obj_draw.c.o
+2026-11-16T16:27:26.5099335Z [54/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/core/lv_obj.c.o
+2026-11-16T16:27:26.6119215Z [55/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/core/lv_obj_scroll.c.o
+2026-11-16T16:27:26.6839152Z [56/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/core/lv_obj_style_gen.c.o
+2026-11-16T16:27:26.7409266Z [57/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/debugging/monkey/lv_monkey.c.o
+2026-11-16T16:27:26.8539320Z [58/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/debugging/sysmon/lv_sysmon.c.o
+2026-11-16T16:27:26.9019232Z [59/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/debugging/test/lv_test_display.c.o
+2026-11-16T16:27:26.9379155Z [60/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/debugging/test/lv_test_fs.c.o
+2026-11-16T16:27:26.9729142Z [61/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/debugging/test/lv_test_helpers.c.o
+2026-11-16T16:27:26.9769037Z [62/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/core/lv_obj_tree.c.o
+2026-11-16T16:27:27.0059439Z [63/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/debugging/test/lv_test_indev.c.o
+2026-11-16T16:27:27.0096395Z [64/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/debugging/test/lv_test_indev_gesture.c.o
+2026-11-16T16:27:27.0329363Z [65/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/debugging/vg_lite_tvg/vg_lite_matrix.c.o
+2026-11-16T16:27:27.0379129Z [66/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/debugging/test/lv_test_screenshot_compare.c.o
+2026-11-16T16:27:27.0455602Z [67/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/debugging/vg_lite_tvg/vg_lite_tvg.cpp.o
+2026-11-16T16:27:27.0498581Z [68/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/core/lv_obj_style.c.o
+2026-11-16T16:27:27.0608718Z [69/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/convert/helium/lv_draw_buf_convert_helium.c.o
+2026-11-16T16:27:27.0738725Z [70/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/convert/neon/lv_draw_buf_convert_neon.c.o
+2026-11-16T16:27:27.0868643Z [71/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/dma2d/lv_draw_dma2d.c.o
+2026-11-16T16:27:27.1026890Z [72/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/dma2d/lv_draw_dma2d_fill.c.o
+2026-11-16T16:27:27.1189376Z [73/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/dma2d/lv_draw_dma2d_img.c.o
+2026-11-16T16:27:27.1371175Z [74/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/core/lv_refr.c.o
+2026-11-16T16:27:27.1498989Z [75/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/espressif/ppa/lv_draw_ppa.c.o
+2026-11-16T16:27:27.1638775Z [76/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/convert/lv_draw_buf_convert.c.o
+2026-11-16T16:27:27.1708569Z [77/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/espressif/ppa/lv_draw_ppa_buf.c.o
+2026-11-16T16:27:27.1818738Z [78/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/espressif/ppa/lv_draw_ppa_fill.c.o
+2026-11-16T16:27:27.1848597Z [79/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/core/lv_obj_pos.c.o
+2026-11-16T16:27:27.1878776Z [80/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/eve/lv_draw_eve.c.o
+2026-11-16T16:27:27.2038913Z [81/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/espressif/ppa/lv_draw_ppa_img.c.o
+2026-11-16T16:27:27.2048921Z [82/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/eve/lv_draw_eve_arc.c.o
+2026-11-16T16:27:27.2097338Z [83/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/eve/lv_draw_eve_fill.c.o
+2026-11-16T16:27:27.2198205Z [84/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/eve/lv_draw_eve_image.c.o
+2026-11-16T16:27:27.2309305Z [85/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/eve/lv_draw_eve_line.c.o
+2026-11-16T16:27:27.2348897Z [86/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/eve/lv_draw_eve_letter.c.o
+2026-11-16T16:27:27.2407736Z [87/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/eve/lv_draw_eve_triangle.c.o
+2026-11-16T16:27:27.2418374Z [88/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/eve/lv_draw_eve_ram_g.c.o
+2026-11-16T16:27:27.2608703Z [89/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/eve/lv_eve.c.o
+2026-11-16T16:27:27.2708021Z [90/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/lv_draw_3d.c.o
+2026-11-16T16:27:27.3209132Z [91/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/lv_draw_blur.c.o
+2026-11-16T16:27:27.3756547Z [92/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/lv_draw_arc.c.o
+2026-11-16T16:27:27.3999063Z [93/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/core/lv_observer.c.o
+2026-11-16T16:27:27.4968929Z [94/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/lv_draw_image.c.o
+2026-11-16T16:27:27.5928448Z [95/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/lv_draw.c.o
+2026-11-16T16:27:27.6239024Z [96/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/lv_draw_buf.c.o
+2026-11-16T16:27:27.6419190Z [97/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/lv_draw_line.c.o
+2026-11-16T16:27:27.6458896Z [98/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/lv_draw_mask.c.o
+2026-11-16T16:27:27.7509321Z [99/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/lv_draw_vector.c.o
+2026-11-16T16:27:27.7859528Z [100/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/lv_draw_rect.c.o
+2026-11-16T16:27:27.7928938Z [101/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/lv_draw_triangle.c.o
+2026-11-16T16:27:27.7958499Z [102/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nanovg/lv_draw_nanovg.c.o
+2026-11-16T16:27:27.8048923Z [103/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nanovg/lv_draw_nanovg_3d.c.o
+2026-11-16T16:27:27.8223234Z [104/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nanovg/lv_draw_nanovg_border.c.o
+2026-11-16T16:27:27.8246823Z [105/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nanovg/lv_draw_nanovg_box_shadow.c.o
+2026-11-16T16:27:27.8250509Z [106/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nanovg/lv_draw_nanovg_arc.c.o
+2026-11-16T16:27:27.8388738Z [107/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/lv_draw_label.c.o
+2026-11-16T16:27:27.8473193Z [108/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nanovg/lv_draw_nanovg_grad.c.o
+2026-11-16T16:27:27.8498663Z [109/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/display/lv_display.c.o
+2026-11-16T16:27:27.8508806Z [110/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nanovg/lv_draw_nanovg_fill.c.o
+2026-11-16T16:27:27.8589796Z [111/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nanovg/lv_draw_nanovg_image.c.o
+2026-11-16T16:27:27.8632808Z [112/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nanovg/lv_draw_nanovg_label.c.o
+2026-11-16T16:27:27.8689091Z [113/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/lv_image_decoder.c.o
+2026-11-16T16:27:27.8751043Z [114/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nanovg/lv_draw_nanovg_layer.c.o
+2026-11-16T16:27:27.8779427Z [115/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nanovg/lv_draw_nanovg_line.c.o
+2026-11-16T16:27:27.8804704Z [116/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nanovg/lv_draw_nanovg_mask_rect.c.o
+2026-11-16T16:27:27.8861192Z [117/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nanovg/lv_draw_nanovg_vector.c.o
+2026-11-16T16:27:27.8862469Z [118/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nanovg/lv_draw_nanovg_triangle.c.o
+2026-11-16T16:27:27.8924878Z [119/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nanovg/lv_nanovg_fbo_cache.c.o
+2026-11-16T16:27:27.8958352Z [120/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nanovg/lv_nanovg_image_cache.c.o
+2026-11-16T16:27:27.9006494Z [121/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nanovg/lv_nanovg_utils.c.o
+2026-11-16T16:27:27.9108398Z [122/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nema_gfx/lv_draw_nema_gfx_arc.c.o
+2026-11-16T16:27:27.9122650Z [123/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nema_gfx/lv_draw_nema_gfx_border.c.o
+2026-11-16T16:27:27.9168697Z [124/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nema_gfx/lv_draw_nema_gfx_img.c.o
+2026-11-16T16:27:27.9170192Z [125/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nema_gfx/lv_draw_nema_gfx_label.c.o
+2026-11-16T16:27:27.9228733Z [126/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nema_gfx/lv_draw_nema_gfx_fill.c.o
+2026-11-16T16:27:27.9338406Z [127/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nema_gfx/lv_draw_nema_gfx_line.c.o
+2026-11-16T16:27:27.9358648Z [128/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nema_gfx/lv_draw_nema_gfx.c.o
+2026-11-16T16:27:27.9360168Z [129/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nema_gfx/lv_draw_nema_gfx_utils.c.o
+2026-11-16T16:27:27.9364273Z [130/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nema_gfx/lv_draw_nema_gfx_layer.c.o
+2026-11-16T16:27:27.9451802Z [131/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nema_gfx/lv_draw_nema_gfx_stm32_hal.c.o
+2026-11-16T16:27:27.9508855Z [132/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nema_gfx/lv_draw_nema_gfx_triangle.c.o
+2026-11-16T16:27:27.9510280Z [133/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nxp/g2d/lv_draw_buf_g2d.c.o
+2026-11-16T16:27:27.9588631Z [134/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nxp/g2d/lv_draw_g2d.c.o
+2026-11-16T16:27:27.9600075Z [135/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nema_gfx/lv_draw_nema_gfx_vector.c.o
+2026-11-16T16:27:27.9661187Z [136/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nxp/g2d/lv_draw_g2d_fill.c.o
+2026-11-16T16:27:27.9753434Z [137/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nxp/g2d/lv_g2d_utils.c.o
+2026-11-16T16:27:27.9768688Z [138/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nxp/g2d/lv_draw_g2d_img.c.o
+2026-11-16T16:27:27.9818419Z [139/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nxp/pxp/lv_draw_buf_pxp.c.o
+2026-11-16T16:27:27.9840392Z [140/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nxp/g2d/lv_g2d_buf_map.c.o
+2026-11-16T16:27:27.9937711Z [141/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nxp/pxp/lv_draw_pxp_fill.c.o
+2026-11-16T16:27:27.9951721Z [142/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nxp/pxp/lv_draw_pxp.c.o
+2026-11-16T16:27:27.9961775Z [143/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nxp/pxp/lv_draw_pxp_img.c.o
+2026-11-16T16:27:27.9972328Z [144/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nema_gfx/lv_nema_gfx_path.c.o
+2026-11-16T16:27:27.9984296Z [145/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nxp/pxp/lv_draw_pxp_layer.c.o
+2026-11-16T16:27:28.0057156Z [146/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nxp/pxp/lv_pxp_cfg.c.o
+2026-11-16T16:27:28.0148665Z [147/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nxp/pxp/lv_pxp_osa.c.o
+2026-11-16T16:27:28.0169058Z [148/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/nxp/pxp/lv_pxp_utils.c.o
+2026-11-16T16:27:28.0175953Z [149/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/renesas/dave2d/lv_draw_dave2d_arc.c.o
+2026-11-16T16:27:28.0185288Z [150/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/opengles/lv_draw_opengles.c.o
+2026-11-16T16:27:28.0215043Z [151/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/renesas/dave2d/lv_draw_dave2d.c.o
+2026-11-16T16:27:28.0270506Z [152/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/renesas/dave2d/lv_draw_dave2d_border.c.o
+2026-11-16T16:27:28.0343319Z [153/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/renesas/dave2d/lv_draw_dave2d_line.c.o
+2026-11-16T16:27:28.0388897Z [154/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/renesas/dave2d/lv_draw_dave2d_fill.c.o
+2026-11-16T16:27:28.0432757Z [155/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/renesas/dave2d/lv_draw_dave2d_image.c.o
+2026-11-16T16:27:28.0460289Z [156/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/renesas/dave2d/lv_draw_dave2d_label.c.o
+2026-11-16T16:27:28.0482017Z [157/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/renesas/dave2d/lv_draw_dave2d_mask_rectangle.c.o
+2026-11-16T16:27:28.0518497Z [158/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/renesas/dave2d/lv_draw_dave2d_triangle.c.o
+2026-11-16T16:27:28.0526963Z [159/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/renesas/dave2d/lv_draw_dave2d_utils.c.o
+2026-11-16T16:27:28.0818841Z [160/620] Building ASM object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/blend/helium/lv_blend_helium.S.o
+2026-11-16T16:27:28.0878040Z [161/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sdl/lv_draw_sdl.c.o
+2026-11-16T16:27:28.1789556Z [162/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/snapshot/lv_snapshot.c.o
+2026-11-16T16:27:28.2530532Z [163/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/blend/lv_draw_sw_blend.c.o
+2026-11-16T16:27:28.3748980Z [164/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/blend/lv_draw_sw_blend_to_a8.c.o
+2026-11-16T16:27:28.9056899Z [165/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/blend/lv_draw_sw_blend_to_l8.c.o
+2026-11-16T16:27:28.9219218Z [166/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/blend/lv_draw_sw_blend_to_al88.c.o
+2026-11-16T16:27:29.4519298Z [167/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/blend/lv_draw_sw_blend_to_argb8888_premultiplied.c.o
+2026-11-16T16:27:29.5029324Z [168/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.c.o
+2026-11-16T16:27:29.5419428Z [169/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb888.c.o
+2026-11-16T16:27:29.5919370Z [170/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/blend/riscv_v/lv_draw_sw_blend_riscv_v_to_rgb888.c.o
+2026-11-16T16:27:29.6192021Z [171/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/blend/lv_draw_sw_blend_to_argb8888.c.o
+2026-11-16T16:27:29.6598872Z [172/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/blend/lv_draw_sw_blend_to_i1.c.o
+2026-11-16T16:27:29.7348933Z [173/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/lv_draw_sw.c.o
+2026-11-16T16:27:29.8719191Z [174/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/lv_draw_sw_arc.c.o
+2026-11-16T16:27:29.9459470Z [175/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/lv_draw_sw_border.c.o
+2026-11-16T16:27:30.0936099Z [176/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/lv_draw_sw_fill.c.o
+2026-11-16T16:27:30.1919371Z [177/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/lv_draw_sw_grad.c.o
+2026-11-16T16:27:30.4496097Z [178/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/lv_draw_sw_box_shadow.c.o
+2026-11-16T16:27:30.5358878Z [179/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/lv_draw_sw_blur.c.o
+2026-11-16T16:27:30.5958964Z [180/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/lv_draw_sw_letter.c.o
+2026-11-16T16:27:30.6589236Z [181/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/blend/lv_draw_sw_blend_to_rgb888.c.o
+2026-11-16T16:27:30.7418188Z [182/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/lv_draw_sw_img.c.o
+2026-11-16T16:27:30.7857042Z [183/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/blend/lv_draw_sw_blend_to_rgb565.c.o
+2026-11-16T16:27:30.7883877Z [184/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/lv_draw_sw_line.c.o
+2026-11-16T16:27:30.8221245Z [185/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/lv_draw_sw_mask_rect.c.o
+2026-11-16T16:27:30.9096202Z [186/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/lv_draw_sw_triangle.c.o
+2026-11-16T16:27:30.9310368Z [187/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/vg_lite/lv_draw_buf_vg_lite.c.o
+2026-11-16T16:27:30.9462478Z [188/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/vg_lite/lv_draw_vg_lite.c.o
+2026-11-16T16:27:30.9604906Z [189/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/vg_lite/lv_draw_vg_lite_arc.c.o
+2026-11-16T16:27:30.9732714Z [190/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/lv_draw_sw_vector.c.o
+2026-11-16T16:27:30.9886186Z [191/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/vg_lite/lv_draw_vg_lite_border.c.o
+2026-11-16T16:27:30.9949061Z [192/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/vg_lite/lv_draw_vg_lite_box_shadow.c.o
+2026-11-16T16:27:31.0048617Z [193/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/vg_lite/lv_draw_vg_lite_fill.c.o
+2026-11-16T16:27:31.0168636Z [194/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/vg_lite/lv_draw_vg_lite_label.c.o
+2026-11-16T16:27:31.0268522Z [195/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/vg_lite/lv_draw_vg_lite_img.c.o
+2026-11-16T16:27:31.0337589Z [196/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/blend/lv_draw_sw_blend_to_rgb565_swapped.c.o
+2026-11-16T16:27:31.0406701Z [197/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/vg_lite/lv_draw_vg_lite_layer.c.o
+2026-11-16T16:27:31.0484017Z [198/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/vg_lite/lv_draw_vg_lite_line.c.o
+2026-11-16T16:27:31.0582953Z [199/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/vg_lite/lv_draw_vg_lite_mask_rect.c.o
+2026-11-16T16:27:31.0620009Z [200/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/vg_lite/lv_draw_vg_lite_vector.c.o
+2026-11-16T16:27:31.0701091Z [201/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/vg_lite/lv_draw_vg_lite_triangle.c.o
+2026-11-16T16:27:31.0788733Z [202/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/vg_lite/lv_vg_lite_bitmap_font_cache.c.o
+2026-11-16T16:27:31.0851205Z [203/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/vg_lite/lv_vg_lite_decoder.c.o
+2026-11-16T16:27:31.0880893Z [204/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/vg_lite/lv_vg_lite_grad.c.o
+2026-11-16T16:27:31.0950912Z [205/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/vg_lite/lv_vg_lite_math.c.o
+2026-11-16T16:27:31.1082056Z [206/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/vg_lite/lv_vg_lite_pending.c.o
+2026-11-16T16:27:31.1168459Z [207/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/vg_lite/lv_vg_lite_path.c.o
+2026-11-16T16:27:31.1218710Z [208/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/vg_lite/lv_vg_lite_stroke.c.o
+2026-11-16T16:27:31.1278940Z [209/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/vg_lite/lv_vg_lite_utils.c.o
+2026-11-16T16:27:31.1458836Z [210/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/display/drm/lv_linux_drm_common.c.o
+2026-11-16T16:27:31.1538844Z [211/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/display/drm/lv_linux_drm.c.o
+2026-11-16T16:27:31.1578767Z [212/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/display/drm/lv_linux_drm_egl.c.o
+2026-11-16T16:27:31.1848868Z [213/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/display/ft81x/lv_ft81x.c.o
+2026-11-16T16:27:31.1918930Z [214/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/display/ili9341/lv_ili9341.c.o
+2026-11-16T16:27:31.2229283Z [215/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/display/lovyan_gfx/lv_lovyan_gfx.cpp.o
+2026-11-16T16:27:31.2279224Z [216/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/display/lcd/lv_lcd_generic_mipi.c.o
+2026-11-16T16:27:31.2649041Z [217/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/display/nv3007/lv_nv3007.c.o
+2026-11-16T16:27:31.3112783Z [218/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/display/renesas_glcdc/lv_renesas_glcdc.c.o
+2026-11-16T16:27:31.3208875Z [219/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/lv_draw_sw_utils.c.o
+2026-11-16T16:27:31.3268965Z [220/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/display/fb/lv_linux_fbdev.c.o
+2026-11-16T16:27:31.3479306Z [221/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/display/st7789/lv_st7789.c.o
+2026-11-16T16:27:31.3639728Z [222/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/display/st7735/lv_st7735.c.o
+2026-11-16T16:27:31.3667897Z [223/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/display/st_ltdc/lv_st_ltdc.c.o
+2026-11-16T16:27:31.3818806Z [224/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/display/st7796/lv_st7796.c.o
+2026-11-16T16:27:31.3908647Z [225/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/draw/eve/lv_draw_eve_display.c.o
+2026-11-16T16:27:31.3988755Z [226/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/display/tft_espi/lv_tft_espi.cpp.o
+2026-11-16T16:27:31.4238942Z [227/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/libinput/lv_xkb.c.o
+2026-11-16T16:27:31.4369042Z [228/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/lv_draw_sw_mask.c.o
+2026-11-16T16:27:31.4688943Z [229/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/libinput/lv_libinput.c.o
+2026-11-16T16:27:31.4919216Z [230/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/nuttx/lv_nuttx_entry.c.o
+2026-11-16T16:27:31.4978872Z [231/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/display/nxp_elcdif/lv_nxp_elcdif.c.o
+2026-11-16T16:27:31.5248708Z [232/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/nuttx/lv_nuttx_fbdev.c.o
+2026-11-16T16:27:31.5538904Z [233/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/nuttx/lv_nuttx_lcd.c.o
+2026-11-16T16:27:31.6139099Z [234/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/nuttx/lv_nuttx_mouse.c.o
+2026-11-16T16:27:31.6449383Z [235/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/nuttx/lv_nuttx_profiler.c.o
+2026-11-16T16:27:31.6670696Z [236/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/evdev/lv_evdev.c.o
+2026-11-16T16:27:31.6671993Z [237/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/draw/sw/lv_draw_sw_transform.c.o
+2026-11-16T16:27:31.6729245Z [238/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/nuttx/lv_nuttx_touchscreen.c.o
+2026-11-16T16:27:31.6959236Z [239/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/opengles/assets/lv_opengles_shader.c.o
+2026-11-16T16:27:31.6978679Z [240/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/opengles/glad/src/gl.c.o
+2026-11-16T16:27:31.7098898Z [241/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/opengles/glad/src/egl.c.o
+2026-11-16T16:27:31.7253722Z [242/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/opengles/glad/src/gles2.c.o
+2026-11-16T16:27:31.7311798Z [243/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/opengles/lv_opengles_driver.c.o
+2026-11-16T16:27:31.7418929Z [244/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/opengles/lv_opengles_debug.c.o
+2026-11-16T16:27:31.7594500Z [245/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/nuttx/lv_nuttx_image_cache.c.o
+2026-11-16T16:27:31.7689578Z [246/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/opengles/lv_opengles_glfw.c.o
+2026-11-16T16:27:31.7741725Z [247/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/opengles/lv_opengles_egl.c.o
+2026-11-16T16:27:31.7780596Z [248/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/opengles/opengl_shader/lv_opengl_shader_manager.c.o
+2026-11-16T16:27:31.7808856Z [249/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/opengles/lv_opengles_texture.c.o
+2026-11-16T16:27:31.7846963Z [250/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/opengles/opengl_shader/lv_opengl_shader_program.c.o
+2026-11-16T16:27:31.7928714Z [251/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/nuttx/lv_nuttx_cache.c.o
+2026-11-16T16:27:31.8069503Z [252/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/sdl/lv_sdl_mouse.c.o
+2026-11-16T16:27:31.8111082Z [253/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/qnx/lv_qnx.c.o
+2026-11-16T16:27:31.8178537Z [254/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/sdl/lv_sdl_egl.c.o
+2026-11-16T16:27:31.8335440Z [255/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/sdl/lv_sdl_mousewheel.c.o
+2026-11-16T16:27:31.8378770Z [256/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/sdl/lv_sdl_keyboard.c.o
+2026-11-16T16:27:31.8447837Z [257/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/sdl/lv_sdl_window.c.o
+2026-11-16T16:27:31.8481410Z [258/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/sdl/lv_sdl_sw.c.o
+2026-11-16T16:27:31.8631635Z [259/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/sdl/lv_sdl_texture.c.o
+2026-11-16T16:27:32.0158996Z [260/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/nuttx/lv_nuttx_libuv.c.o
+2026-11-16T16:27:32.0552926Z [261/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/uefi/lv_uefi_indev_pointer.c.o
+2026-11-16T16:27:32.0718850Z [262/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/wayland/lv_wayland.c.o
+2026-11-16T16:27:32.0895558Z [263/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/wayland/lv_wl_egl_backend.c.o
+2026-11-16T16:27:32.0929350Z [264/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/uefi/lv_uefi_indev_keyboard.c.o
+2026-11-16T16:27:32.1078889Z [265/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/wayland/lv_wl_g2d_backend.c.o
+2026-11-16T16:27:32.1259105Z [266/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/uefi/lv_uefi_context.c.o
+2026-11-16T16:27:32.1408730Z [267/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/wayland/lv_wl_seat.c.o
+2026-11-16T16:27:32.1528786Z [268/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/wayland/lv_wl_pointer.c.o
+2026-11-16T16:27:32.1558808Z [269/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/wayland/lv_wl_shm_backend.c.o
+2026-11-16T16:27:32.1769036Z [270/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/wayland/lv_wl_window.c.o
+2026-11-16T16:27:32.1903142Z [271/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/wayland/lv_wl_xdg_shell.c.o
+2026-11-16T16:27:32.2009078Z [272/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/wayland/lv_wl_touch.c.o
+2026-11-16T16:27:32.2158725Z [273/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/windows/lv_windows_context.c.o
+2026-11-16T16:27:32.2248809Z [274/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/windows/lv_windows_display.c.o
+2026-11-16T16:27:32.2375159Z [275/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/wayland/lv_wl_keyboard.c.o
+2026-11-16T16:27:32.2461625Z [276/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/x11/lv_x11_display.c.o
+2026-11-16T16:27:32.2477153Z [277/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/windows/lv_windows_input.c.o
+2026-11-16T16:27:32.2668738Z [278/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/uefi/lv_uefi_private.c.o
+2026-11-16T16:27:32.2889062Z [279/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/x11/lv_x11_input.c.o
+2026-11-16T16:27:32.3018772Z [280/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/font_manager/lv_font_manager.c.o
+2026-11-16T16:27:32.3039043Z [281/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/uefi/lv_uefi_display.c.o
+2026-11-16T16:27:32.3299162Z [282/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/font_manager/lv_font_manager_recycle.c.o
+2026-11-16T16:27:32.3389104Z [283/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/drivers/uefi/lv_uefi_indev_touch.c.o
+2026-11-16T16:27:32.3949104Z [284/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font.c.o
+2026-11-16T16:27:32.4397185Z [285/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/fmt_txt/lv_font_fmt_txt.c.o
+2026-11-16T16:27:32.5839459Z [286/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_dejavu_16_persian_hebrew.c.o
+2026-11-16T16:27:32.6460634Z [287/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/imgfont/lv_imgfont.c.o
+2026-11-16T16:27:32.6804085Z [288/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_10.c.o
+2026-11-16T16:27:32.7513729Z [289/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_14.c.o
+2026-11-16T16:27:32.7849104Z [290/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_12.c.o
+2026-11-16T16:27:32.8509076Z [291/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/binfont_loader/lv_binfont_loader.c.o
+2026-11-16T16:27:32.9159251Z [292/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_14_aligned.c.o
+2026-11-16T16:27:32.9439189Z [293/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_18.c.o
+2026-11-16T16:27:33.0269218Z [294/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_16.c.o
+2026-11-16T16:27:33.0489455Z [295/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_20.c.o
+2026-11-16T16:27:33.0694564Z [296/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_22.c.o
+2026-11-16T16:27:33.2069310Z [297/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_24.c.o
+2026-11-16T16:27:33.2479177Z [298/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_30.c.o
+2026-11-16T16:27:33.2489055Z [299/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_26.c.o
+2026-11-16T16:27:33.3009584Z [300/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_32.c.o
+2026-11-16T16:27:33.4299198Z [301/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_28_compressed.c.o
+2026-11-16T16:27:33.4309010Z [302/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_28.c.o
+2026-11-16T16:27:33.4528294Z [303/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_34.c.o
+2026-11-16T16:27:33.5429613Z [304/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_38.c.o
+2026-11-16T16:27:33.5819144Z [305/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_40.c.o
+2026-11-16T16:27:33.5941616Z [306/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_36.c.o
+2026-11-16T16:27:33.6999303Z [307/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_44.c.o
+2026-11-16T16:27:33.7608921Z [308/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_46.c.o
+2026-11-16T16:27:33.8689476Z [309/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_42.c.o
+2026-11-16T16:27:33.8839513Z [310/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_source_han_sans_sc_14_cjk.c.o
+2026-11-16T16:27:33.8898859Z [311/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_48.c.o
+2026-11-16T16:27:33.9757973Z [312/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_montserrat_8.c.o
+2026-11-16T16:27:33.9879019Z [313/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/indev/lv_gridnav.c.o
+2026-11-16T16:27:34.0229085Z [314/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_unscii_16.c.o
+2026-11-16T16:27:34.0859357Z [315/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_source_han_sans_sc_16_cjk.c.o
+2026-11-16T16:27:34.0888761Z [316/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/indev/lv_indev_gesture.c.o
+2026-11-16T16:27:34.1145714Z [317/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/font/lv_font_unscii_8.c.o
+2026-11-16T16:27:34.1529361Z [318/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/FT800-FT813/EVE_commands.c.o
+2026-11-16T16:27:34.1879010Z [319/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/FT800-FT813/EVE_supplemental.c.o
+2026-11-16T16:27:34.3115921Z [320/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/layouts/lv_layout.c.o
+2026-11-16T16:27:34.3963254Z [321/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/layouts/grid/lv_grid.c.o
+2026-11-16T16:27:34.4452850Z [322/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/layouts/flex/lv_flex.c.o
+2026-11-16T16:27:34.4729361Z [323/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/indev/lv_indev_scroll.c.o
+2026-11-16T16:27:34.5088911Z [324/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/ffmpeg/lv_ffmpeg.c.o
+2026-11-16T16:27:34.5749127Z [325/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/barcode/code128.c.o
+2026-11-16T16:27:34.6489215Z [326/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/barcode/lv_barcode.c.o
+2026-11-16T16:27:34.6749064Z [327/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/indev/lv_indev.c.o
+2026-11-16T16:27:34.8109294Z [328/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/bmp/lv_bmp.c.o
+2026-11-16T16:27:34.8179315Z [329/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/bin_decoder/lv_bin_decoder.c.o
+2026-11-16T16:27:34.8699436Z [330/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/freetype/lv_freetype.c.o
+2026-11-16T16:27:34.9012670Z [331/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/frogfs/src/frogfs.c.o
+2026-11-16T16:27:34.9191319Z [332/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/frogfs/src/decomp_raw.c.o
+2026-11-16T16:27:34.9869351Z [333/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/freetype/lv_freetype_glyph.c.o
+2026-11-16T16:27:35.0009098Z [334/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/fsdrv/lv_fs_cbfs.c.o
+2026-11-16T16:27:35.1269483Z [335/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/freetype/lv_freetype_outline.c.o
+2026-11-16T16:27:35.1306121Z [336/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/freetype/lv_freetype_image.c.o
+2026-11-16T16:27:35.2449441Z [337/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/fsdrv/lv_fs_arduino_sd.cpp.o
+2026-11-16T16:27:35.2484746Z [338/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/freetype/lv_ftsystem.c.o
+2026-11-16T16:27:35.2989141Z [339/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/fsdrv/lv_fs_fatfs.c.o
+2026-11-16T16:27:35.3079103Z [340/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/fsdrv/lv_fs_arduino_esp_littlefs.cpp.o
+2026-11-16T16:27:35.3349141Z [341/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/fsdrv/lv_fs_frogfs.c.o
+2026-11-16T16:27:35.4789360Z [342/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/fsdrv/lv_fs_memfs.c.o
+2026-11-16T16:27:35.5109229Z [343/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/gif/gif.c.o
+2026-11-16T16:27:35.5459145Z [344/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/gltf/gltf_data/lv_gltf_data.cpp.o
+2026-11-16T16:27:35.5529052Z [345/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/fsdrv/lv_fs_littlefs.c.o
+2026-11-16T16:27:35.5779553Z [346/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/gltf/gltf_data/lv_gltf_data_animations.cpp.o
+2026-11-16T16:27:35.5818881Z [347/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/gltf/gltf_data/lv_gltf_data_cache.cpp.o
+2026-11-16T16:27:35.6069083Z [348/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/fsdrv/lv_fs_posix.c.o
+2026-11-16T16:27:35.6139090Z [349/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/gltf/gltf_data/lv_gltf_data_injest.cpp.o
+2026-11-16T16:27:35.6159050Z [350/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/gltf/gltf_data/lv_gltf_data_mesh.cpp.o
+2026-11-16T16:27:35.6239386Z [351/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/fsdrv/lv_fs_uefi.c.o
+2026-11-16T16:27:35.6329810Z [352/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/fsdrv/lv_fs_stdio.c.o
+2026-11-16T16:27:35.6388903Z [353/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/gltf/gltf_data/lv_gltf_data_skin.cpp.o
+2026-11-16T16:27:35.6429036Z [354/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/gltf/gltf_data/lv_gltf_data_primitive.cpp.o
+2026-11-16T16:27:35.6450387Z [355/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/gltf/gltf_data/lv_gltf_data_shader.cpp.o
+2026-11-16T16:27:35.6488592Z [356/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/gltf/gltf_data/lv_gltf_data_texture.cpp.o
+2026-11-16T16:27:35.6596467Z [357/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/gltf/gltf_data/lv_gltf_uniform_locations.cpp.o
+2026-11-16T16:27:35.6618677Z [358/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/gltf/gltf_environment/lv_gltf_ibl_sampler.c.o
+2026-11-16T16:27:35.6625163Z [359/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/fsdrv/lv_fs_win32.c.o
+2026-11-16T16:27:35.6629254Z [360/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/gltf/gltf_data/lv_gltf_model_node.cpp.o
+2026-11-16T16:27:35.6708658Z [361/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/gltf/gltf_view/assets/lv_gltf_view_shader.c.o
+2026-11-16T16:27:35.6785936Z [362/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/gltf/gltf_view/assets/chromatic.c.o
+2026-11-16T16:27:35.6820346Z [363/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/gltf/math/lv_3dmath.c.o
+2026-11-16T16:27:35.6833058Z [364/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/gltf/gltf_view/lv_gltf_view_render.cpp.o
+2026-11-16T16:27:35.6876551Z [365/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/gltf/gltf_view/lv_gltf_view_shader.cpp.o
+2026-11-16T16:27:35.6901654Z [366/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/gltf/gltf_view/lv_gltf_view.cpp.o
+2026-11-16T16:27:35.6929537Z [367/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/gltf/math/lv_gltf_math.cpp.o
+2026-11-16T16:27:35.7051565Z [368/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/gstreamer/lv_gstreamer.c.o
+2026-11-16T16:27:35.7378183Z [369/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/lz4/lz4.c.o
+2026-11-16T16:27:35.7739080Z [370/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/nanovg/nanovg.c.o
+2026-11-16T16:27:35.8915764Z [371/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/qrcode/lv_qrcode.c.o
+2026-11-16T16:27:35.9255887Z [372/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/lodepng/lodepng.c.o
+2026-11-16T16:27:35.9287270Z [373/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/libjpeg_turbo/lv_libjpeg_turbo.c.o
+2026-11-16T16:27:35.9489315Z [374/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/rle/lv_rle.c.o
+2026-11-16T16:27:35.9768194Z [375/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/svg/lv_svg.c.o
+2026-11-16T16:27:36.1261529Z [376/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/qrcode/qrcodegen.c.o
+2026-11-16T16:27:36.1452724Z [377/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/svg/lv_svg_parser.c.o
+2026-11-16T16:27:36.1579229Z [378/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/rlottie/lv_rlottie.c.o
+2026-11-16T16:27:36.1638829Z [379/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/libwebp/lv_libwebp.c.o
+2026-11-16T16:27:36.1878931Z [380/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/libpng/lv_libpng.c.o
+2026-11-16T16:27:36.1909548Z [381/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/svg/lv_svg_token.c.o
+2026-11-16T16:27:36.1998897Z [382/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgAccessor.cpp.o
+2026-11-16T16:27:36.2098778Z [383/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgCanvas.cpp.o
+2026-11-16T16:27:36.2188798Z [384/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgAnimation.cpp.o
+2026-11-16T16:27:36.2248550Z [385/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/lodepng/lv_lodepng.c.o
+2026-11-16T16:27:36.2278671Z [386/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgCapi.cpp.o
+2026-11-16T16:27:36.2411157Z [387/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgCompressor.cpp.o
+2026-11-16T16:27:36.2468901Z [388/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgGlCanvas.cpp.o
+2026-11-16T16:27:36.2524913Z [389/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgFill.cpp.o
+2026-11-16T16:27:36.2561774Z [390/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgInitializer.cpp.o
+2026-11-16T16:27:36.2629247Z [391/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgLottieBuilder.cpp.o
+2026-11-16T16:27:36.2708494Z [392/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgLoader.cpp.o
+2026-11-16T16:27:36.2798605Z [393/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgLottieAnimation.cpp.o
+2026-11-16T16:27:36.2848570Z [394/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgLottieInterpolator.cpp.o
+2026-11-16T16:27:36.2888492Z [395/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgLottieExpressions.cpp.o
+2026-11-16T16:27:36.3013778Z [396/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgLottieLoader.cpp.o
+2026-11-16T16:27:36.3038531Z [397/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgLottieModel.cpp.o
+2026-11-16T16:27:36.3108783Z [398/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgLottieModifier.cpp.o
+2026-11-16T16:27:36.3198309Z [399/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/svg/lv_svg_decoder.c.o
+2026-11-16T16:27:36.3203506Z [400/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgLottieParser.cpp.o
+2026-11-16T16:27:36.3211855Z [401/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgMath.cpp.o
+2026-11-16T16:27:36.3251313Z [402/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgLottieParserHandler.cpp.o
+2026-11-16T16:27:36.3373727Z [403/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgPaint.cpp.o
+2026-11-16T16:27:36.3408919Z [404/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgRender.cpp.o
+2026-11-16T16:27:36.3498647Z [405/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgSaver.cpp.o
+2026-11-16T16:27:36.3548184Z [406/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgPicture.cpp.o
+2026-11-16T16:27:36.3578403Z [407/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgRawLoader.cpp.o
+2026-11-16T16:27:36.3582904Z [408/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgScene.cpp.o
+2026-11-16T16:27:36.3644430Z [409/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgShape.cpp.o
+2026-11-16T16:27:36.3670482Z [410/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgStr.cpp.o
+2026-11-16T16:27:36.3758793Z [411/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgSvgPath.cpp.o
+2026-11-16T16:27:36.3830025Z [412/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgSvgCssStyle.cpp.o
+2026-11-16T16:27:36.3879476Z [413/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgSvgSceneBuilder.cpp.o
+2026-11-16T16:27:36.3895943Z [414/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgSvgLoader.cpp.o
+2026-11-16T16:27:36.3904106Z [415/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgSwCanvas.cpp.o
+2026-11-16T16:27:36.3932996Z [416/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgSvgUtil.cpp.o
+2026-11-16T16:27:36.3958585Z [417/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/svg/lv_svg_render.c.o
+2026-11-16T16:27:36.4036284Z [418/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgSwFill.cpp.o
+2026-11-16T16:27:36.4093993Z [419/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgSwMemPool.cpp.o
+2026-11-16T16:27:36.4148486Z [420/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgSwMath.cpp.o
+2026-11-16T16:27:36.4163947Z [421/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgSwImage.cpp.o
+2026-11-16T16:27:36.4185122Z [422/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgSwRaster.cpp.o
+2026-11-16T16:27:36.4208948Z [423/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgSwPostEffect.cpp.o
+2026-11-16T16:27:36.4279141Z [424/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgSwRenderer.cpp.o
+2026-11-16T16:27:36.4344972Z [425/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgSwStroke.cpp.o
+2026-11-16T16:27:36.4349397Z [426/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgSwRle.cpp.o
+2026-11-16T16:27:36.4356205Z [427/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgSwShape.cpp.o
+2026-11-16T16:27:36.4508060Z [428/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgTaskScheduler.cpp.o
+2026-11-16T16:27:36.4528786Z [429/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgText.cpp.o
+2026-11-16T16:27:36.4530110Z [430/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgXmlParser.cpp.o
+2026-11-16T16:27:36.4578740Z [431/620] Building CXX object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/thorvg/tvgWgCanvas.cpp.o
+2026-11-16T16:27:36.4848867Z [432/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/vg_lite_driver/VGLite/vg_lite.c.o
+2026-11-16T16:27:36.4850296Z [433/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/vg_lite_driver/VGLite/vg_lite_matrix.c.o
+2026-11-16T16:27:36.4908959Z [434/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/vg_lite_driver/VGLite/vg_lite_image.c.o
+2026-11-16T16:27:36.5059072Z [435/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/vg_lite_driver/VGLite/vg_lite_path.c.o
+2026-11-16T16:27:36.5148961Z [436/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/vg_lite_driver/VGLiteKernel/vg_lite_kernel.c.o
+2026-11-16T16:27:36.5208730Z [437/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/vg_lite_driver/lv_vg_lite_hal/lv_vg_lite_hal.c.o
+2026-11-16T16:27:36.5258769Z [438/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/vg_lite_driver/VGLite/vg_lite_stroke.c.o
+2026-11-16T16:27:36.5358697Z [439/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/vg_lite_driver/lv_vg_lite_hal/vg_lite_os.c.o
+2026-11-16T16:27:36.6429429Z [440/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/lv_init.c.o
+2026-11-16T16:27:36.6549295Z [441/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/tiny_ttf/lv_tiny_ttf.c.o
+2026-11-16T16:27:36.7609452Z [442/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/cache/class/lv_cache_lru_ll.c.o
+2026-11-16T16:27:36.7699088Z [443/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/cache/class/lv_cache_sc_da.c.o
+2026-11-16T16:27:36.7748649Z [444/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/cache/class/lv_cache_lru_rb.c.o
+2026-11-16T16:27:36.8709708Z [445/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/tjpgd/tjpgd.c.o
+2026-11-16T16:27:36.8769430Z [446/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/cache/instance/lv_image_cache.c.o
+2026-11-16T16:27:36.9189298Z [447/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/cache/lv_cache_entry.c.o
+2026-11-16T16:27:36.9248928Z [448/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/cache/lv_cache.c.o
+2026-11-16T16:27:36.9494701Z [449/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/cache/instance/lv_image_header_cache.c.o
+2026-11-16T16:27:36.9649142Z [450/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/libs/tjpgd/lv_tjpgd.c.o
+2026-11-16T16:27:36.9949160Z [451/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_async.c.o
+2026-11-16T16:27:37.0248828Z [452/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_bidi.c.o
+2026-11-16T16:27:37.1148882Z [453/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_circle_buf.c.o
+2026-11-16T16:27:37.1641532Z [454/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_anim_timeline.c.o
+2026-11-16T16:27:37.1650798Z [455/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_area.c.o
+2026-11-16T16:27:37.1679418Z [456/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_array.c.o
+2026-11-16T16:27:37.1949095Z [457/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_color_op.c.o
+2026-11-16T16:27:37.2629439Z [458/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_color.c.o
+2026-11-16T16:27:37.2798845Z [459/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_iter.c.o
+2026-11-16T16:27:37.2800412Z [460/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_anim.c.o
+2026-11-16T16:27:37.2906817Z [461/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_grad.c.o
+2026-11-16T16:27:37.4189387Z [462/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_event.c.o
+2026-11-16T16:27:37.4379379Z [463/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_ll.c.o
+2026-11-16T16:27:37.4499304Z [464/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_matrix.c.o
+2026-11-16T16:27:37.4679192Z [465/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_log.c.o
+2026-11-16T16:27:37.4878895Z [466/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_palette.c.o
+2026-11-16T16:27:37.5078959Z [467/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_lru.c.o
+2026-11-16T16:27:37.5248800Z [468/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_profiler_builtin_posix.c.o
+2026-11-16T16:27:37.5339127Z [469/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_pending.c.o
+2026-11-16T16:27:37.5408817Z [470/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_fs.c.o
+2026-11-16T16:27:37.5688898Z [471/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_templ.c.o
+2026-11-16T16:27:37.7476543Z [472/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_math.c.o
+2026-11-16T16:27:37.7679367Z [473/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_profiler_builtin.c.o
+2026-11-16T16:27:37.7975125Z [474/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_text_ap.c.o
+2026-11-16T16:27:37.8010857Z [475/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_rb.c.o
+2026-11-16T16:27:37.8018802Z [476/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_style_gen.c.o
+2026-11-16T16:27:37.8074314Z [477/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_style.c.o
+2026-11-16T16:27:37.8369092Z [478/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/osal/lv_cmsis_rtos2.c.o
+2026-11-16T16:27:37.8736248Z [479/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/osal/lv_freertos.c.o
+2026-11-16T16:27:37.9169218Z [480/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_utils.c.o
+2026-11-16T16:27:37.9399345Z [481/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_timer.c.o
+2026-11-16T16:27:37.9428830Z [482/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/osal/lv_mqx.c.o
+2026-11-16T16:27:37.9708948Z [483/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/osal/lv_os_none.c.o
+2026-11-16T16:27:37.9828717Z [484/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/osal/lv_linux.c.o
+2026-11-16T16:27:37.9900716Z [485/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_tree.c.o
+2026-11-16T16:27:38.0189410Z [486/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/osal/lv_sdl2.c.o
+2026-11-16T16:27:38.0362887Z [487/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/osal/lv_pthread.c.o
+2026-11-16T16:27:38.0398891Z [488/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/osal/lv_rtthread.c.o
+2026-11-16T16:27:38.0418795Z [489/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/osal/lv_windows.c.o
+2026-11-16T16:27:38.0598871Z [490/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/osal/lv_os.c.o
+2026-11-16T16:27:38.0819124Z [491/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/others/translation/lv_translation.c.o
+2026-11-16T16:27:38.0865368Z [492/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/others/file_explorer/lv_file_explorer.c.o
+2026-11-16T16:27:38.1039336Z [493/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/others/fragment/lv_fragment_manager.c.o
+2026-11-16T16:27:38.1178937Z [494/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/others/fragment/lv_fragment.c.o
+2026-11-16T16:27:38.1298953Z [495/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/misc/lv_text.c.o
+2026-11-16T16:27:38.1593230Z [496/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/stdlib/clib/lv_sprintf_clib.c.o
+2026-11-16T16:27:38.1619105Z [497/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/stdlib/clib/lv_mem_core_clib.c.o
+2026-11-16T16:27:38.1939232Z [498/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/stdlib/clib/lv_string_clib.c.o
+2026-11-16T16:27:38.2149291Z [499/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/stdlib/builtin/lv_mem_core_builtin.c.o
+2026-11-16T16:27:38.2369207Z [500/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/stdlib/micropython/lv_mem_core_micropython.c.o
+2026-11-16T16:27:38.2569273Z [501/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/stdlib/rtthread/lv_mem_core_rtthread.c.o
+2026-11-16T16:27:38.2668954Z [502/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/stdlib/rtthread/lv_sprintf_rtthread.c.o
+2026-11-16T16:27:38.2939194Z [503/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/stdlib/rtthread/lv_string_rtthread.c.o
+2026-11-16T16:27:38.3049009Z [504/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/stdlib/uefi/lv_mem_core_uefi.c.o
+2026-11-16T16:27:38.3198794Z [505/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/stdlib/lv_mem.c.o
+2026-11-16T16:27:38.3439253Z [506/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/stdlib/builtin/lv_string_builtin.c.o
+2026-11-16T16:27:38.4559407Z [507/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/stdlib/builtin/lv_sprintf_builtin.c.o
+2026-11-16T16:27:38.5984486Z [508/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/tick/lv_tick.c.o
+2026-11-16T16:27:38.6329245Z [509/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/3dtexture/lv_3dtexture.c.o
+2026-11-16T16:27:38.6396259Z [510/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/stdlib/builtin/lv_tlsf.c.o
+2026-11-16T16:27:38.7266928Z [511/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/themes/lv_theme.c.o
+2026-11-16T16:27:38.7731041Z [512/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/themes/mono/lv_theme_mono.c.o
+2026-11-16T16:27:38.8360472Z [513/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/animimage/lv_animimage.c.o
+2026-11-16T16:27:38.8421190Z [514/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/themes/simple/lv_theme_simple.c.o
+2026-11-16T16:27:38.9679300Z [515/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/button/lv_button.c.o
+2026-11-16T16:27:39.1699927Z [516/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/arclabel/lv_arclabel.c.o
+2026-11-16T16:27:39.2229369Z [517/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/calendar/lv_calendar_chinese.c.o
+2026-11-16T16:27:39.3119107Z [518/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/arc/lv_arc.c.o
+2026-11-16T16:27:39.3689347Z [519/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/bar/lv_bar.c.o
+2026-11-16T16:27:39.4003678Z [520/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/calendar/lv_calendar_header_arrow.c.o
+2026-11-16T16:27:39.4689279Z [521/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/themes/default/lv_theme_default.c.o
+2026-11-16T16:27:39.4779137Z [522/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/buttonmatrix/lv_buttonmatrix.c.o
+2026-11-16T16:27:39.4982094Z [523/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/calendar/lv_calendar_header_dropdown.c.o
+2026-11-16T16:27:39.5330853Z [524/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/gif/lv_gif.c.o
+2026-11-16T16:27:39.5715415Z [525/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/calendar/lv_calendar.c.o
+2026-11-16T16:27:39.6887785Z [526/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/checkbox/lv_checkbox.c.o
+2026-11-16T16:27:39.7733361Z [527/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/imagebutton/lv_imagebutton.c.o
+2026-11-16T16:27:39.8169435Z [528/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/ime/lv_ime_pinyin.c.o
+2026-11-16T16:27:39.8709981Z [529/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/canvas/lv_canvas.c.o
+2026-11-16T16:27:40.0650615Z [530/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/keyboard/lv_keyboard.c.o
+2026-11-16T16:27:40.0829582Z [531/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/image/lv_image.c.o
+2026-11-16T16:27:40.1289179Z [532/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/led/lv_led.c.o
+2026-11-16T16:27:40.1589410Z [533/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/list/lv_list.c.o
+2026-11-16T16:27:40.1618849Z [534/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/lottie/lv_lottie.c.o
+2026-11-16T16:27:40.1919139Z [535/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/dropdown/lv_dropdown.c.o
+2026-11-16T16:27:40.2189399Z [536/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/objx_templ/lv_objx_templ.c.o
+2026-11-16T16:27:40.2639015Z [537/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/line/lv_line.c.o
+2026-11-16T16:27:40.3327858Z [538/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_animimage_properties.c.o
+2026-11-16T16:27:40.3599190Z [539/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/msgbox/lv_msgbox.c.o
+2026-11-16T16:27:40.3738821Z [540/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_arc_properties.c.o
+2026-11-16T16:27:40.4006106Z [541/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/chart/lv_chart.c.o
+2026-11-16T16:27:40.4049275Z [542/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_bar_properties.c.o
+2026-11-16T16:27:40.4417735Z [543/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_buttonmatrix_properties.c.o
+2026-11-16T16:27:40.4476074Z [544/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_chart_properties.c.o
+2026-11-16T16:27:40.4979389Z [545/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_image_properties.c.o
+2026-11-16T16:27:40.5024234Z [546/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_checkbox_properties.c.o
+2026-11-16T16:27:40.5069020Z [547/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_dropdown_properties.c.o
+2026-11-16T16:27:40.5494215Z [548/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_keyboard_properties.c.o
+2026-11-16T16:27:40.5535484Z [549/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_led_properties.c.o
+2026-11-16T16:27:40.5657923Z [550/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/label/lv_label.c.o
+2026-11-16T16:27:40.5978289Z [551/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_label_properties.c.o
+2026-11-16T16:27:40.5996715Z [552/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_line_properties.c.o
+2026-11-16T16:27:40.6068695Z [553/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_menu_properties.c.o
+2026-11-16T16:27:40.6168722Z [554/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/menu/lv_menu.c.o
+2026-11-16T16:27:40.6228670Z [555/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_roller_properties.c.o
+2026-11-16T16:27:40.6518819Z [556/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_obj_properties.c.o
+2026-11-16T16:27:40.6769162Z [557/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_spinbox_properties.c.o
+2026-11-16T16:27:40.6770704Z [558/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_scale_properties.c.o
+2026-11-16T16:27:40.6791513Z [559/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_span_properties.c.o
+2026-11-16T16:27:40.6819151Z [560/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_slider_properties.c.o
+2026-11-16T16:27:40.6878606Z [561/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_spinner_properties.c.o
+2026-11-16T16:27:40.7289868Z [562/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_style_properties.c.o
+2026-11-16T16:27:40.7329081Z [563/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_table_properties.c.o
+2026-11-16T16:27:40.7406486Z [564/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_tabview_properties.c.o
+2026-11-16T16:27:40.7439824Z [565/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_switch_properties.c.o
+2026-11-16T16:27:40.8109395Z [566/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/property/lv_textarea_properties.c.o
+2026-11-16T16:27:41.0559376Z [567/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/spinner/lv_spinner.c.o
+2026-11-16T16:27:41.1398978Z [568/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/slider/lv_slider.c.o
+2026-11-16T16:27:41.1458884Z [569/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/roller/lv_roller.c.o
+2026-11-16T16:27:41.2149317Z [570/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/spinbox/lv_spinbox.c.o
+2026-11-16T16:27:41.3297343Z [571/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/switch/lv_switch.c.o
+2026-11-16T16:27:41.5079285Z [572/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/scale/lv_scale.c.o
+2026-11-16T16:27:41.5109011Z [573/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/tileview/lv_tileview.c.o
+2026-11-16T16:27:41.5227895Z [574/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/span/lv_span.c.o
+2026-11-16T16:27:41.5692589Z [575/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/tabview/lv_tabview.c.o
+2026-11-16T16:27:41.8104480Z [576/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/table/lv_table.c.o
+2026-11-16T16:27:41.8249205Z [577/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/win/lv_win.c.o
+2026-11-16T16:27:41.8976603Z [578/620] Building CXX object CMakeFiles/template_app_platform.dir/Release/src/platform/ocr_service.cpp.o
+2026-11-16T16:27:41.8998605Z FAILED: [code=1] CMakeFiles/template_app_platform.dir/Release/src/platform/ocr_service.cpp.o 
+2026-11-16T16:27:41.9004003Z /usr/bin/aarch64-linux-gnu-g++ --sysroot=/home/runner/work/cz-app/cz-app/.cache/sdk_bsp-src -DAPP_DRM_CONNECTOR_ID=-1 -DAPP_DRM_DEVICE=\"/dev/dri/card0\" -DAPP_FRAMEBUFFER_DEVICE=\"/dev/fb0\" -DAPP_KEY_INPUT_DEVICE=\"\" -DAPP_USE_DRM=0 -DLV_CONF_PATH=\"/home/runner/work/cz-app/cz-app/src/config/lv_conf.h\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_DESKTOP=0 -DCMAKE_INTDIR=\"Release\" -I/home/runner/work/cz-app/cz-app/src/platform -I/home/runner/work/cz-app/cz-app/src/logger -isystem /home/runner/work/cz-app/cz-app/.cache/sdk_bsp-src/usr/include/freetype2 -isystem /home/runner/work/cz-app/cz-app/.cache/sdk_bsp-src/usr/include/libpng16 -isystem /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-src -isystem /home/runner/work/cz-app/cz-app/src/config -isystem /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build -O3 -DNDEBUG -std=c++17 -MD -MT CMakeFiles/template_app_platform.dir/Release/src/platform/ocr_service.cpp.o -MF CMakeFiles/template_app_platform.dir/Release/src/platform/ocr_service.cpp.o.d -o CMakeFiles/template_app_platform.dir/Release/src/platform/ocr_service.cpp.o -c /home/runner/work/cz-app/cz-app/src/platform/ocr_service.cpp
+2026-11-16T16:27:41.9009459Z In file included from /home/runner/work/cz-app/cz-app/src/platform/ocr_service.cpp:9:
+2026-11-16T16:27:41.9010380Z /home/runner/work/cz-app/cz-app/src/logger/logger.h:9:10: fatal error: fmt/format.h: No such file or directory
+2026-11-16T16:27:41.9011054Z     9 | #include <fmt/format.h>
+2026-11-16T16:27:41.9011459Z       |          ^~~~~~~~~~~~~~
+2026-11-16T16:27:41.9011841Z compilation terminated.
+2026-11-16T16:27:42.0159528Z [579/620] Building C object /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/CMakeFiles/lvgl.dir/Release/src/widgets/textarea/lv_textarea.c.o
+2026-11-16T16:27:42.1964579Z [580/620] Building CXX object CMakeFiles/template_app_platform.dir/Release/src/platform/linux_input.cpp.o
+2026-11-16T16:27:42.4503173Z [581/620] Building CXX object CMakeFiles/template_app_platform.dir/Release/src/platform/device_status.cpp.o
+2026-11-16T16:27:42.5956973Z [582/620] Building CXX object CMakeFiles/template_app_platform.dir/Release/src/platform/screenshot_service.cpp.o
+2026-11-16T16:27:42.5963803Z /home/runner/work/cz-app/cz-app/src/platform/screenshot_service.cpp: In function ‘platform::screenshot::CaptureResult platform::screenshot::capture_active_screen()’:
+2026-11-16T16:27:42.5965014Z /home/runner/work/cz-app/cz-app/src/platform/screenshot_service.cpp:60:59: warning: ‘.png’ directive output may be truncated writing 4 bytes into a region of size between 0 and 20 [-Wformat-truncation=]
+2026-11-16T16:27:42.5965710Z    60 |                   "template_%04d%02d%02d_%02d%02d%02d_%03d.png",
+2026-11-16T16:27:42.5966044Z       |                                                           ^~~~
+2026-11-16T16:27:42.5966422Z In file included from /usr/aarch64-linux-gnu/include/stdio.h:980,
+2026-11-16T16:27:42.5966788Z                  from /usr/aarch64-linux-gnu/include/c++/13/cstdio:42,
+2026-11-16T16:27:42.5967224Z                  from /usr/aarch64-linux-gnu/include/c++/13/ext/string_conversions.h:45,
+2026-11-16T16:27:42.5967876Z                  from /usr/aarch64-linux-gnu/include/c++/13/bits/basic_string.h:4109,
+2026-11-16T16:27:42.5968556Z                  from /usr/aarch64-linux-gnu/include/c++/13/string:54,
+2026-11-16T16:27:42.5968960Z                  from /home/runner/work/cz-app/cz-app/src/platform/screenshot_service.h:9,
+2026-11-16T16:27:42.5969402Z                  from /home/runner/work/cz-app/cz-app/src/platform/screenshot_service.cpp:7:
+2026-11-16T16:27:42.5969873Z In function ‘int snprintf(char*, size_t, const char*, ...)’,
+2026-11-16T16:27:42.5970634Z     inlined from ‘std::string platform::screenshot::{anonymous}::timestamp_filename()’ at /home/runner/work/cz-app/cz-app/src/platform/screenshot_service.cpp:58:18,
+2026-11-16T16:27:42.5971574Z     inlined from ‘platform::screenshot::CaptureResult platform::screenshot::capture_active_screen()’ at /home/runner/work/cz-app/cz-app/src/platform/screenshot_service.cpp:156:53:
+2026-11-16T16:27:42.5972465Z /usr/aarch64-linux-gnu/include/bits/stdio2.h:54:35: note: ‘__builtin___snprintf_chk’ output between 33 and 86 bytes into a destination of size 48
+2026-11-16T16:27:42.5973086Z    54 |   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+2026-11-16T16:27:42.5973459Z       |          ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-11-16T16:27:42.5973782Z    55 |                                    __glibc_objsize (__s), __fmt,
+2026-11-16T16:27:42.5974138Z       |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-11-16T16:27:42.5974573Z    56 |                                    __va_arg_pack ());
+2026-11-16T16:27:42.5974875Z       |                                    ~~~~~~~~~~~~~~~~~
+2026-11-16T16:27:51.0474774Z [583/620] Linking CXX static library /home/runner/work/cz-app/cz-app/.cache/cp0-deps/lvgl-build/lib/Release/liblvgl_thorvg.a
+2026-11-16T16:27:51.0475616Z ninja: build stopped: subcommand failed.
+2026-11-16T16:27:51.0503708Z ##[error]Process completed with exit code 1.
+2026-11-16T16:27:51.0615329Z Post job cleanup.
+2026-11-16T16:27:51.1285094Z [command]/usr/bin/git version
+2026-11-16T16:27:51.1324502Z git version 2.56.1
+2026-11-16T16:27:51.1355792Z Temporarily overriding HOME='/home/runner/work/_temp/180101e6-8349-481a-b29a-52d9d2f0ac37' before making global git config changes
+2026-11-16T16:27:51.1356766Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-16T16:27:51.1360947Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cz-app/cz-app
+2026-11-16T16:27:51.1391432Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-16T16:27:51.1417130Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-16T16:27:51.1575131Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-16T16:27:51.1597094Z http.https://github.com/.extraheader
+2026-11-16T16:27:51.1605385Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-16T16:27:51.1629391Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-16T16:27:51.1800054Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-16T16:27:51.1824139Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-16T16:27:51.2106091Z Cleaning up orphan processes
+2026-11-16T16:27:51.2364228Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
