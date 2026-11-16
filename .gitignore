@@ -146,5 +146,12 @@ compile_commands.json
 temp/
 
 
+# Downloaded build artifacts / logs (temporary)
+/art/
+/art.zip
+/buildlog/
+/buildlog.zip
+*.zip
+
 # TODOS
 TODO
