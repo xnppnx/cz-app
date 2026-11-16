@@ -95,6 +95,8 @@ bool load_application_config(const std::string& path,
                 error = "invalid dark_mode value at line " + std::to_string(line_number);
                 return false;
             }
+        } else if (section == "ocr" && key == "endpoint") {
+            config.ocr_endpoint = trim(line.substr(separator + 1));
         }
     }
 

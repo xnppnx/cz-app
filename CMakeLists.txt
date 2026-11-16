@@ -35,7 +35,7 @@ if(NOT APP_CONFIG_FILE)
     if(USE_DESKTOP)
         set(APP_CONFIG_FILE "${CMAKE_CURRENT_SOURCE_DIR}/config/template-app.conf")
     else()
-        set(APP_CONFIG_FILE "/etc/template-app.conf")
+        set(APP_CONFIG_FILE "/etc/snapread.conf")
     endif()
 endif()
 
@@ -413,6 +413,8 @@ target_include_directories(${PROJECT_NAME}_platform
     PUBLIC
         ${LVGL_INCLUDE_DIR}
         "${CMAKE_CURRENT_SOURCE_DIR}/src/platform"
+        "${CMAKE_CURRENT_SOURCE_DIR}/src/logger"
+        ${PLATFORM_INCLUDE_DIR}
 )
 
 target_compile_definitions(${PROJECT_NAME}_platform
@@ -518,6 +520,7 @@ target_include_directories(${PROJECT_NAME}_viewmodel
     PUBLIC
         "${CMAKE_CURRENT_SOURCE_DIR}/src/viewmodel/"
         "${CMAKE_CURRENT_SOURCE_DIR}/src/model"
+        "${CMAKE_CURRENT_SOURCE_DIR}/src/platform"
         ${LVGL_INCLUDE_DIR}
 )
 

@@ -6,11 +6,11 @@
 
 include(GNUInstallDirs)
 
-set(APP_DISPLAY_NAME "Pocket Notes" CACHE STRING "Human-readable application name used by launchers and package filename")
-set(APP_DEBIAN_REVISION "rev2" CACHE STRING "Debian package revision/vendor suffix")
+set(APP_DISPLAY_NAME "SnapRead" CACHE STRING "Human-readable application name used by launchers and package filename")
+set(APP_DEBIAN_REVISION "rev1" CACHE STRING "Debian package revision/vendor suffix")
 set(APP_DEBIAN_ARCHITECTURE "arm64" CACHE STRING "Debian package architecture")
 set(APP_MAINTAINER "xnppnx <xnppnx@126.com>" CACHE STRING "Debian package maintainer")
-set(APP_PACKAGE_DESCRIPTION "A simple notes app for CardputerZero" CACHE STRING "Debian package summary")
+set(APP_PACKAGE_DESCRIPTION "Snap a photo and read its text on CardputerZero" CACHE STRING "Debian package summary")
 set(APP_INSTALL_SYSTEMD_SERVICE ON CACHE BOOL "Install a systemd service file for embedded deployments")
 
 set(APP_GENERATED_DIR "${CMAKE_CURRENT_BINARY_DIR}/generated/package")
@@ -34,6 +34,7 @@ install(TARGETS ${PROJECT_NAME}
 
 install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/config/template-app.conf"
     DESTINATION "/etc"
+    RENAME "snapread.conf"
 )
 
 install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/assets/audio/"
@@ -51,7 +52,7 @@ install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/assets/images/"
 install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/assets/images/"
     DESTINATION "${CMAKE_INSTALL_DATADIR}/APPLaunch/share/images"
     FILES_MATCHING
-    PATTERN "template*.png"
+    PATTERN "snapread*.png"
 )
 
 install(FILES "${APP_GENERATED_DIR}/${PROJECT_NAME}.desktop"

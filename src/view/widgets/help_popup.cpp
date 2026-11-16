@@ -22,17 +22,17 @@ struct HelpRow {
 };
 
 constexpr std::array<HelpRow, 5> kAppleRows = {{
-    {"HOLD ESC / 4", "Exit"},
-    {"5", "Text weight"},
+    {"SPACE/ENTER", "Take photo & read"},
+    {"C", "Clear result"},
+    {"H", "This help"},
     {"6", "Light / dark"},
-    {"7", "Version info"},
-    {"8", "Open counter"},
+    {"HOLD ESC / 4", "Exit"},
 }};
 
 constexpr std::array<HelpRow, 3> kButterRows = {{
-    {"ESC", "Back to home"},
-    {"Z / LEFT", "Decrease"},
-    {"C / RIGHT", "Increase"},
+    {"SPACE/ENTER", "Take photo & read"},
+    {"C", "Clear result"},
+    {"HOLD ESC", "Exit"},
 }};
 
 } // namespace

@@ -33,7 +33,9 @@ BaseViewModel::BaseViewModel()
       draft_subject_(""),
       notes_list_subject_(""),
       selected_index_subject_(0),
-      status_subject_("") {}
+      status_subject_(""),
+      ocr_result_subject_(""),
+      ocr_busy_subject_(false) {}
 
 BaseViewModel::~BaseViewModel() = default;
 
@@ -83,6 +85,14 @@ lv_subject_t* BaseViewModel::selected_index_subject() {
 
 lv_subject_t* BaseViewModel::status_subject() {
     return status_subject_.native();
+}
+
+lv_subject_t* BaseViewModel::ocr_result_subject() {
+    return ocr_result_subject_.native();
+}
+
+lv_subject_t* BaseViewModel::ocr_busy_subject() {
+    return ocr_busy_subject_.native();
 }
 
 bool BaseViewModel::is_dark_mode() const {
@@ -301,6 +311,66 @@ void BaseViewModel::move_selection(int delta) {
 
 void BaseViewModel::set_status(const char* status) {
     status_subject_.set(status ? status : "");
+}
+
+void BaseViewModel::set_ocr_endpoint(const char* endpoint) {
+    ocr_service_.set_endpoint(endpoint ? endpoint : "");
+}
+
+bool BaseViewModel::request_capture() {
+    if (ocr_busy_subject_.value()) {
+        set_status("Busy, please wait");
+        return false;
+    }
+    if (!ocr_service_.start()) {
+        set_status("Busy, please wait");
+        return false;
+    }
+    ocr_busy_subject_.set(true);
+    ocr_result_subject_.set("Taking photo...");
+    set_status("Working");
+    std::fprintf(stderr, "[snapread] capture requested\n");
+    return true;
+}
+
+void BaseViewModel::poll_ocr() {
+    platform::OcrJobResult result;
+    if (!ocr_service_.consume(result)) {
+        return;
+    }
+
+    ocr_busy_subject_.set(false);
+    switch (result.error) {
+        case platform::OcrErrorCode::None:
+            ocr_result_subject_.set(result.text.c_str());
+            set_status("Done - SPACE to shoot again");
+            std::fprintf(stderr, "[snapread] success: %zu chars\n", result.text.size());
+            break;
+        case platform::OcrErrorCode::CameraFailed:
+            ocr_result_subject_.set("Camera failed. Check camera and retry.");
+            set_status("Camera error");
+            std::fprintf(stderr, "[snapread] camera failed: %s\n", result.detail.c_str());
+            break;
+        case platform::OcrErrorCode::UploadFailed:
+            ocr_result_subject_.set("Upload failed. Check Wi-Fi and server.");
+            set_status("Network error");
+            std::fprintf(stderr, "[snapread] upload failed: %s\n", result.detail.c_str());
+            break;
+        case platform::OcrErrorCode::EmptyResult:
+            ocr_result_subject_.set("No text recognized. Try a clearer shot.");
+            set_status("No text");
+            std::fprintf(stderr, "[snapread] empty result: %s\n", result.detail.c_str());
+            break;
+        default:
+            ocr_result_subject_.set("Recognition failed.");
+            set_status("Error");
+            break;
+    }
+}
+
+void BaseViewModel::clear_ocr_result() {
+    ocr_result_subject_.set("");
+    set_status("Ready");
 }
 
 const std::string& BaseViewModel::draft() const {

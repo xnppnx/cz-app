@@ -9,6 +9,7 @@
 #include "subjects.h"
 #include "base_model.h"
 #include "notes_model.h"
+#include "ocr_service.h"
 
 #include "lvgl.h"
 
@@ -34,6 +35,8 @@ public:
     lv_subject_t* notes_list_subject();
     lv_subject_t* selected_index_subject();
     lv_subject_t* status_subject();
+    lv_subject_t* ocr_result_subject();
+    lv_subject_t* ocr_busy_subject();
 
     bool is_dark_mode() const;
     void set_dark_mode(bool enabled);
@@ -62,6 +65,12 @@ public:
     void move_selection(int delta);
     void set_status(const char* status);
 
+    // OCR actions.
+    void set_ocr_endpoint(const char* endpoint);
+    bool request_capture();
+    void poll_ocr();
+    void clear_ocr_result();
+
     const std::string& draft() const;
     std::size_t selected_index() const;
     std::size_t notes_count() const;
@@ -84,7 +93,10 @@ private:
     reactive::StringSubject<1024> notes_list_subject_;
     reactive::IntSubject selected_index_subject_;
     reactive::StringSubject<64> status_subject_;
+    reactive::StringSubject<2048> ocr_result_subject_;
+    reactive::BoolSubject ocr_busy_subject_;
     bool editing_existing_{false};
+    platform::OcrService ocr_service_;
 };
 
 } // namespace viewmodel

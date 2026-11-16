@@ -14,7 +14,7 @@
 #include "screenshot_service.h"
 #include "screen_manager.h"
 #include "base_viewmodel.h"
-#include "notes_controller.h"
+#include "ocr_controller.h"
 #include "theme.h"
 #include "toast.h"
 
@@ -51,6 +51,12 @@
 #define APP_CONFIG_FILE "template-app.conf"
 #endif
 
+// Default recognition relay endpoint. Can be overridden by [ocr] endpoint in
+// the writable config file, so changing servers never needs a rebuild.
+#ifndef OCR_DEFAULT_ENDPOINT
+#define OCR_DEFAULT_ENDPOINT "http://192.168.1.10:8000/ocr"
+#endif
+
 namespace app {
 namespace {
 
@@ -73,13 +79,13 @@ std::string writable_config_path() {
     if (const char* xdg_config_home = std::getenv("XDG_CONFIG_HOME")) {
         const std::filesystem::path root(xdg_config_home);
         if (!root.empty() && root.is_absolute()) {
-            return (root / "template-app" / "template-app.conf").string();
+            return (root / "snapread" / "snapread.conf").string();
         }
     }
     if (const char* home = std::getenv("HOME")) {
         const std::filesystem::path root(home);
         if (!root.empty() && root.is_absolute()) {
-            return (root / ".config" / "template-app" / "template-app.conf").string();
+            return (root / ".config" / "snapread" / "snapread.conf").string();
         }
     }
     return APP_CONFIG_FILE;
@@ -145,7 +151,7 @@ lv_display_t* init_device_display() {
 
 int Application::run() {
     logger::Logger::init();
-    logger::Logger::set_tag("template");
+    logger::Logger::set_tag("snapread");
 
     lv_init();
 
@@ -195,11 +201,16 @@ int Application::run() {
     simulator_frame.bind_dark_mode(view_model.dark_mode_subject());
 #endif
 
-    view_model.load_notes();
+    if (!config.ocr_endpoint.empty()) {
+        view_model.set_ocr_endpoint(config.ocr_endpoint.c_str());
+        LOG_INFO("OCR endpoint configured");
+    } else {
+        view_model.set_ocr_endpoint(OCR_DEFAULT_ENDPOINT);
+    }
 
     ScreenManager screen_manager(view_model, assets);
     screen_manager.start();
-    NotesController shortcuts(view_model, assets);
+    OcrController shortcuts(view_model, assets);
 
     DarkModePersistence dark_mode_persistence{user_config_path, view_model.is_dark_mode()};
     auto* dark_mode_observer = lv_subject_add_observer(view_model.dark_mode_subject(),
