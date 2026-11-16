@@ -3,44 +3,33 @@
 这一版是**真正的记事本**，用官方 LVGL 模板写的，走通了完整流水线：
 我写代码 → 推 GitHub → 云端编译出安装包 → 你装机验收。
 
-## 安装（和上次一样，先卸旧的）
+## 安装（升级到修好键盘的版本）
+
+你现在 pocket-notes 已经装过了，这次是**升级**，不用卸载。包名和版本变了（rev2），直接装即可。
 
 在 Shawn-Mac 那台电脑的 PowerShell 里，一条一条敲，密码还是那个。
-
-**连进机器：**
-```
-ssh xnp@192.168.1.111
-```
-
-**卸载之前的模板演示版（问 Y/n 直接回车）：**
-```
-sudo apt remove --purge templateapp pocketnotes
-```
-
-**退出回自己电脑：**
-```
-exit
-```
 
 **传新包**（先确认在 dist 目录；不在就先敲那条 cd）：
 ```
 cd C:\Users\Shawn-Mac\WorkBuddy\spaces\2026_11_16_15-14-11\cz-app\dist
 ```
 ```
-scp pocketnotes_lvgl_0.2.1_arm64.deb xnp@192.168.1.111:~
+scp pocketnotes_lvgl_0.2.1_rev2_arm64.deb xnp@192.168.1.111:~
 ```
 
-**再连进去：**
+**连进机器：**
 ```
 ssh xnp@192.168.1.111
 ```
 
-**安装：**
+**升级安装：**
 ```
-sudo apt install --no-install-recommends ~/pocketnotes_lvgl_0.2.1_arm64.deb
+sudo apt install --no-install-recommends ~/pocketnotes_lvgl_0.2.1_rev2_arm64.deb
 ```
 
-装完回主界面看菜单，图标名应该叫 **Pocket Notes**。（上次那个刷新菜单的命令如果报错不用管，图标一般自己会出现；实在没出现就重启一下机器。）
+`Y/n` 直接回车。看到回到提示符就装好了。装完回主界面看菜单，还是 **Pocket Notes** 图标（旧的 TemplateApp 图标不用管）。
+
+> 如果升级时报配置文件的选择提示（问是否保留旧配置），选保留默认（直接回车）即可。
 
 ## 按键说明（这版和以前不一样，记一下）
 
