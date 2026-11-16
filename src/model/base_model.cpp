@@ -9,11 +9,11 @@
 namespace model {
 
 const char* BaseModel::app_title() const {
-    return "Pocket Notes";
+    return "拍照识字";
 }
 
 const char* BaseModel::greeting() const {
-    return "Hello World";
+    return "Ready";
 }
 
 bool BaseModel::dark_mode() const {
